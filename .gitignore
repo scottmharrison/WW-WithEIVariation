@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+1_raw/
+# Rebuilt by 2_data_processing/01_build_contrasts.py (27 and 31 MB)
+2_data_processing/contrast_rts.csv
+2_data_processing/contrast_trials_acc.csv

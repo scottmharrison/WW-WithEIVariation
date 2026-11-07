@@ -1,0 +1,5 @@
+seed 20261107
+strength scale x3, S 0.5, R 1.114: slope change at 5 Hz -11.6%, at 20 Hz -4.9%; offset b -25.5 (baseline -27.3)
+strength scale x3, S 0.5, R 1.297: slope change at 5 Hz -13.5%, at 20 Hz -4.6%; offset b 4.7 (baseline -27.3)
+strength scale x10, S 0.5, R 1.114: slope change at 5 Hz -25.5%, at 20 Hz -14.5%; offset b -6.3 (baseline -27.3)
+strength scale x10, S 0.5, R 1.297: slope change at 5 Hz -29.3%, at 20 Hz -19.0%; offset b 82.3 (baseline -27.3)

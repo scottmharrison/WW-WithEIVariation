@@ -1,0 +1,17 @@
+contrast,axis,calibration_rms_log,two_additions_adequate,few_units,instance_share_A,sp_adequate,sp_p,needed,best_addition,lowest_aic_model,sp_change_s,sp_change_p
+P1,practice,0.0441,True,3,0.0,False,0.0,not adequate,SP+drive,SP+drive,-0.353,-0.0004
+P2,practice,0.012,True,,0.0807,True,0.99922,practice,,P,0.094,3.7938
+P3,practice,0.0053,True,,0.3297,True,0.11256,both,,SP+drive,0.2571,1.0155
+P4,practice,0.0467,True,,0.0,False,0.0,not adequate,SP+drive,SP+drive,-0.0883,-0.8791
+P5,practice,0.0248,True,,0.4238,True,0.91331,either,,P,-0.0597,0.0761
+P6,practice,0.0122,True,,0.0642,True,0.994,both,,SP,0.5177,2.2598
+P7,practice,0.0243,True,,0.0002,False,0.0,not adequate,SP+ndt,SP+ndt,-0.0,0.0036
+P8,practice,0.0114,True,,0.0337,True,0.476,both,,SP+drive,-0.3691,1.2676
+P9,practice,0.0039,True,,0.0,True,0.35365,skill,,SP+drive,0.0855,0.6345
+A1,instruction,0.0112,True,3,0.0,False,0.0,not adequate,SP+drive,SP+drive,0.9924,0.1033
+A2,instruction,0.0092,True,,0.0017,False,0.0,not adequate,SP+drive,SP+drive,-2.9375,3.0938
+F1,item practice,0.0111,True,,0.1025,False,0.0,not adequate,SP+drive,SP+drive+ndt,-0.1669,3.9805
+S1,skill,0.0974,True,,0.5808,False,0.0,not adequate,none adequate,SP+drive+ndt,-3.0,2.7928
+S2,skill,0.02,True,,0.0,False,0.03801,not adequate,SP+ndt,SP+ndt,0.0703,-2.3225
+D1,drive level,0.0231,True,2,0.3262,False,0.0,not adequate,SP+drive,SP+drive,-1.5,6.0
+D2,drive level,0.0026,True,,0.0537,False,0.0,not adequate,SP+drive,SP+drive,-2.5,6.0

@@ -1,0 +1,16 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+unit,Unit.,,text; 0 missing
+cell,Cell.,,accuracy; all; conjunction; feature; simon; spatial_config; speed; stroop; 0 missing
+period,A or B.,,A; B; 0 missing
+n,Trials.,trials,11 to 6774; 0 missing
+q05_ms,5th percentile of RT.,ms,20 to 896.933; 0 missing
+q10_ms,10th percentile of RT.,ms,32 to 1095.3; 0 missing
+q25_ms,25th percentile of RT.,ms,69 to 1381.5; 0 missing
+q50_ms,50th percentile of RT.,ms,134 to 1536.72; 0 missing
+q75_ms,75th percentile of RT.,ms,255 to 2336; 0 missing
+q90_ms,90th percentile of RT.,ms,332.205 to 4700.56; 0 missing
+q99_ms,99th percentile of RT.,ms,414 to 16131.4; 0 missing
+mu_ms,Ex-Gaussian mu.,ms,13 to 1445.79; 0 missing
+sigma_ms,Ex-Gaussian sigma.,ms,0 to 463.02; 0 missing
+tau_ms,Ex-Gaussian tau.,ms,0.076 to 1962.65; 0 missing

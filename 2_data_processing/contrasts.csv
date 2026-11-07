@@ -1,0 +1,17 @@
+contrast,dataset,task,axis,period_A,period_B
+P1,ratcliff1998,brightness discrimination,practice,first quarter of sessions,last quarter
+P2,wagenmakers2008,lexical decision,practice,first quarter of trials,last quarter
+P3,keuleers2012,lexical decision (BLP),practice,first quarter of trials,last quarter
+P4,cochrane2023,motion discrimination,practice,day 1 (first quarter),day 4 (last quarter)
+P5,wolfe2010,visual search,practice,first quarter of trials,last quarter
+P6,rouder2008,visual working memory,practice,first quarter of trials,last quarter
+P7,pratte2010,Stroop and Simon,practice,first quarter of trials,last quarter
+P8,enkavi2019_threebytwo,cued task switching,practice,first quarter of trials,last quarter
+P9,enkavi2019_ant,attention network (flanker),practice,first quarter of trials,last quarter
+A1,ratcliff1998,brightness discrimination,instruction,speed instruction,accuracy instruction
+A2,wagenmakers2008,lexical decision,instruction,speed instruction,accuracy instruction
+F1,wagenmakers2008,lexical decision,item practice,very low frequency words,high frequency words
+S1,sc2_action_type3,StarCraft 2 by league,skill,Bronze games,Grandmaster games
+S2,cochrane2023,motion discrimination,skill,"non-players, day 1","action video game players, day 1"
+D1,roitman2002,motion discrimination (monkeys),drive level,coherence 0.032,coherence 0.512
+D2,cochrane2023,motion discrimination,drive level,coherence 0.064,coherence 0.448

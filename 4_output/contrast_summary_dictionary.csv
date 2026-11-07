@@ -1,0 +1,47 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+dataset,DataPrep key.,,text; 0 missing
+task,Task.,,text; 0 missing
+axis,Axis moved.,,drive level; instruction; item practice; practice; skill; 0 missing
+period_A,Condition A.,,text; 0 missing
+period_B,Condition B.,,"Grandmaster games; accuracy instruction; action video game players, day 1; coherence 0.448; coherence 0.512; day 4 (last quarter); high frequency words; last quarter; 0 missing"
+n_units,Units (within) or units in A / B (between).,,text; 0 missing
+n_units_without_sigma,Units with no defined sigma change (period-A sigma < 2 ms).,units,0 to 29; 0 missing
+n_units_without_tau,Units with no defined tau change (period-A tau < 2 ms).,units,0 to 64; 0 missing
+q05_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 5th percentile, median over units.",%,-50 to 55.75; 0 missing
+q05_low,Lower end of 95% bootstrap interval.,%,-50 to 19.58; 0 missing
+q05_high,Upper end.,%,-40 to 69.92; 0 missing
+q10_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 10th percentile, median over units.",%,-62.5 to 52.63; 0 missing
+q10_low,Lower end of 95% bootstrap interval.,%,-62.5 to 21.4; 0 missing
+q10_high,Upper end.,%,-62.5 to 73.83; 0 missing
+q25_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 25th percentile, median over units.",%,-58.33 to 57.66; 0 missing
+q25_low,Lower end of 95% bootstrap interval.,%,-75 to 28.98; 0 missing
+q25_high,Upper end.,%,-54.17 to 82.56; 0 missing
+q50_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 50th percentile, median over units.",%,-52.94 to 86.75; 0 missing
+q50_low,Lower end of 95% bootstrap interval.,%,-58.83 to 41.14; 0 missing
+q50_high,Upper end.,%,-47.06 to 97.81; 0 missing
+q75_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 75th percentile, median over units.",%,-50 to 130.99; 0 missing
+q75_low,Lower end of 95% bootstrap interval.,%,-57.14 to 57.14; 0 missing
+q75_high,Upper end.,%,-45.63 to 155.96; 0 missing
+q90_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 90th percentile, median over units.",%,-52.94 to 210.53; 0 missing
+q90_low,Lower end of 95% bootstrap interval.,%,-59.52 to 109.66; 0 missing
+q90_high,Upper end.,%,-50 to 302.32; 0 missing
+q99_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 99th percentile, median over units.",%,-59.03 to 520.4; 0 missing
+q99_low,Lower end of 95% bootstrap interval.,%,-65.17 to 460.14; 0 missing
+q99_high,Upper end.,%,-54.39 to 680.54; 0 missing
+mu_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), ex-Gaussian mu.",%,-70.3 to 25.6; 0 missing
+mu_low,Lower end of 95% interval.,%,-74.06 to 10.8; 0 missing
+mu_high,Upper end.,%,-67.82 to 42.11; 0 missing
+mu_direction,"falls / no clear change / rises, by the interval.",,falls; no clear change; rises; 0 missing
+sigma_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), ex-Gaussian sigma.",%,-88.15 to 3.79; 0 missing
+sigma_low,Lower end of 95% interval.,%,-100 to -8.36; 0 missing
+sigma_high,Upper end.,%,-87.26 to 58.76; 0 missing
+sigma_direction,"falls / no clear change / rises, by the interval.",,falls; no clear change; 0 missing
+tau_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), ex-Gaussian tau.",%,-51.95 to 811.56; 0 missing
+tau_low,Lower end of 95% interval.,%,-60.21 to 492.69; 1 missing
+tau_high,Upper end.,%,-46.9 to 898.94; 1 missing
+tau_direction,"falls / no clear change / rises, by the interval.",,falls; no clear change; rises; 0 missing
+front_minus_tail,Change at 10th minus change at 99th percentile.,percentage points,-467.77 to 23.59; 0 missing
+front_minus_tail_low,Lower end of 95% interval.,percentage points,-612.81 to 10.9; 0 missing
+front_minus_tail_high,Upper end.,percentage points,-411.4 to 33.05; 0 missing
+location,"front-led (interval below 0), tail-led (above 0), uniform.",,front-led; tail-led; uniform; 0 missing

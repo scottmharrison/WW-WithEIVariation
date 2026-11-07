@@ -1,0 +1,6 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+unit,"Participant, monkey, or StarCraft 2 game.",,text; 0 missing
+cell,Condition within which A and B are compared; all = pooled.,,accuracy; all; conjunction; feature; simon; spatial_config; speed; stroop; 0 missing
+period,A or B.,,A; B; 0 missing
+rt_s,Reaction time.,s,0.001 to 147.12; 0 missing

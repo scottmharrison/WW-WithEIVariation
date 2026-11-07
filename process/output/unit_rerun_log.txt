@@ -1,0 +1,20 @@
+wrote 3,454 rows to 4_output/unit_measures.csv
+seed 61106
+P1 tail-led 23.59 (np.float64(0.35), np.float64(26.25)) mu falls tau falls
+P2 uniform -5.18 (np.float64(-23.27), np.float64(9.94)) mu falls tau no clear change
+P3 front-led -1.43 (np.float64(-3.39), np.float64(-0.14)) mu falls tau falls
+P4 uniform 8.42 (np.float64(-3.24), np.float64(17.39)) mu falls tau falls
+P5 uniform 4.35 (np.float64(-4.39), np.float64(11.08)) mu no clear change tau falls
+P6 uniform -20.22 (np.float64(-38.29), np.float64(0.05)) mu falls tau no clear change
+P7 uniform -3.69 (np.float64(-12.02), np.float64(0.82)) mu falls tau rises
+P8 tail-led 4.32 (np.float64(2.26), np.float64(6.08)) mu no clear change tau falls
+P9 front-led -3.06 (np.float64(-4.55), np.float64(-0.72)) mu no clear change tau no clear change
+A1 front-led -467.77 (np.float64(-612.81), np.float64(-411.4)) mu rises tau rises
+A2 front-led -58.36 (np.float64(-125.21), np.float64(-29.55)) mu rises tau rises
+F1 tail-led 14.24 (np.float64(1.66), np.float64(20.93)) mu falls tau falls
+S1 uniform -3.47 (np.float64(-8.15), np.float64(3.1)) mu falls tau falls
+S2 uniform 0.51 (np.float64(-24.87), np.float64(25.78)) mu no clear change tau no clear change
+D1 tail-led 11.15 (np.float64(3.89), np.float64(18.0)) mu falls tau no clear change
+D2 tail-led 21.96 (np.float64(10.9), np.float64(33.05)) mu falls tau falls
+wrote 4_output/contrast_summary.csv and 4_output/unit_changes.csv
+wrote 4_output/SkillPractice-AcrossTasks_report.pdf

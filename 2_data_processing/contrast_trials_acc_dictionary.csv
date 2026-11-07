@@ -1,0 +1,7 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+unit,Unit.,,text; 0 missing
+cell,Cell.,,accuracy; all; conjunction; feature; simon; spatial_config; speed; stroop; 0 missing
+period,A or B.,,A; B; 0 missing
+rt_s,Reaction time.,s,0.001 to 147.12; 0 missing
+correct,"1 correct, 0 error, empty where accuracy is not recorded.",,0 to 1; 46857 missing

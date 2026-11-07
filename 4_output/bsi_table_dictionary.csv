@@ -1,0 +1,10 @@
+column,description,units,valid_values
+S,"Control strength (Lo, Wang & Wang 2015 definition, 0.3 r_e g_AMPA).",,0 to 2; 0 missing
+R,Control ratio (r_i g_GABA) / (r_e g_AMPA).,,1 to 1.4; 0 missing
+a_fit,Abbott-Chance a fitted to the simulated neuron.,Hz/nA,299.106 to 333.694; 0 missing
+b_fit,Abbott-Chance b.,Hz,-37.7323 to 1.4752; 0 missing
+d_fit,Abbott-Chance d.,s,0.10933 to 0.1495; 0 missing
+fit_rms_hz,RMS error of that fit over 0-60 Hz.,Hz,0.475 to 0.741; 0 missing
+gain,a / a at S = 0.,ratio,0.91433 to 1.02006; 0 missing
+shift_nA,b/a minus b/a at S = 0.,nA,-0.03064 to 0.0871; 0 missing
+curvature,d / d at S = 0.,ratio,0.91023 to 1.24469; 0 missing

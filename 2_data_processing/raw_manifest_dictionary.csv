@@ -1,0 +1,5 @@
+column,description,units,valid_values
+file,File in 1_raw/.,,text; 0 missing
+source,Path copied from.,,text; 0 missing
+bytes,Size.,bytes,1263 to 1.23928e+08; 0 missing
+sha256,SHA-256 checksum.,,text; 0 missing

@@ -1,0 +1,52 @@
+seed 20261107
+(0) blp__03: identical RTs to wwsim.py: True
+(0) roitman2002__12: identical RTs to wwsim.py: True
+(0) sc2__21: identical RTs to wwsim.py: True
+
+== circuit only: evidence e = 3 Hz (accuracy without control 0.799); accuracy by e: [0.559, 0.62, 0.726, 0.799, 0.862, 0.952, 0.99, 1.0]
+   no control: mean RT 801 ms, accuracy 0.799, tau/sigma 1.75, 10th/99th 600/1392 ms, no commitment 0.0%
+   S 0.25 R 1.0  : mean RT   -23.6%, accuracy 0.749, tau/sigma   1.13, 10th/99th 475/965 ms, no commitment 0.0%
+   S 0.25 R 1.1  : mean RT   -10.7%, accuracy 0.784, tau/sigma   1.47, 10th/99th 543/1193 ms, no commitment 0.0%
+   S 0.25 R 1.156: mean RT    -3.7%, accuracy 0.787, tau/sigma   1.80, 10th/99th 584/1323 ms, no commitment 0.0%
+   S 0.25 R 1.2  : mean RT    +2.9%, accuracy 0.801, tau/sigma   1.70, 10th/99th 620/1410 ms, no commitment 0.0%
+   S 0.25 R 1.247: mean RT   +14.1%, accuracy 0.823, tau/sigma   2.19, 10th/99th 680/1667 ms, no commitment 0.0%
+   S 0.25 R 1.297: mean RT   +26.7%, accuracy 0.834, tau/sigma   2.18, 10th/99th 748/1823 ms, no commitment 0.0%
+   S 0.25 R 1.4  : mean RT   +64.2%, accuracy 0.881, tau/sigma   2.62, 10th/99th 938/2637 ms, no commitment 0.0%
+   S 0.5  R 1.0  : mean RT   -34.8%, accuracy 0.738, tau/sigma   0.73, 10th/99th 406/767 ms, no commitment 0.0%
+   S 0.5  R 1.1  : mean RT   -18.1%, accuracy 0.774, tau/sigma   1.34, 10th/99th 500/1061 ms, no commitment 0.0%
+   S 0.5  R 1.156: mean RT    -2.4%, accuracy 0.790, tau/sigma   1.67, 10th/99th 589/1348 ms, no commitment 0.0%
+   S 0.5  R 1.2  : mean RT   +15.0%, accuracy 0.824, tau/sigma   2.11, 10th/99th 679/1790 ms, no commitment 0.0%
+   S 0.5  R 1.247: mean RT   +45.6%, accuracy 0.862, tau/sigma   2.41, 10th/99th 844/2238 ms, no commitment 0.0%
+   S 0.5  R 1.297: mean RT   +90.4%, accuracy 0.901, tau/sigma   3.16, 10th/99th 1057/3315 ms, no commitment 0.0%
+   S 0.5  R 1.4  : mean RT  +628.3%, accuracy 1.000, tau/sigma   0.00, 10th/99th 3833/8179 ms, no commitment 77.5%
+   S 1.0  R 1.0  : mean RT   -47.4%, accuracy 0.697, tau/sigma   0.00, 10th/99th 327/589 ms, no commitment 0.0%
+   S 1.0  R 1.1  : mean RT   -17.9%, accuracy 0.772, tau/sigma   1.32, 10th/99th 502/1089 ms, no commitment 0.0%
+   S 1.0  R 1.156: mean RT   +17.7%, accuracy 0.827, tau/sigma   2.23, 10th/99th 702/1772 ms, no commitment 0.0%
+   S 1.0  R 1.2  : mean RT   +81.2%, accuracy 0.901, tau/sigma   2.93, 10th/99th 1019/3089 ms, no commitment 0.0%
+   S 1.0  R 1.247: mean RT  +337.9%, accuracy 0.998, tau/sigma   2.66, 10th/99th 2194/7095 ms, no commitment 0.9%
+   S 1.0  R 1.297: mean RT    +nan%, accuracy nan, tau/sigma    nan, 10th/99th nan/nan ms, no commitment 100.0%
+   S 1.0  R 1.4  : mean RT    +nan%, accuracy nan, tau/sigma    nan, 10th/99th nan/nan ms, no commitment 100.0%
+
+== full model: evidence e = 4 Hz (accuracy without control 0.801); accuracy by e: [0.547, 0.588, 0.67, 0.741, 0.801, 0.876, 0.913, 0.943]
+   no control: mean RT 716 ms, accuracy 0.801, tau/sigma 0.84, 10th/99th 501/1267 ms, no commitment 0.0%
+   S 0.25 R 1.0  : mean RT   -19.6%, accuracy 0.787, tau/sigma   0.79, 10th/99th 432/905 ms, no commitment 0.0%
+   S 0.25 R 1.1  : mean RT    -8.0%, accuracy 0.805, tau/sigma   0.89, 10th/99th 475/1106 ms, no commitment 0.0%
+   S 0.25 R 1.156: mean RT    -2.5%, accuracy 0.794, tau/sigma   0.96, 10th/99th 492/1215 ms, no commitment 0.0%
+   S 0.25 R 1.2  : mean RT    +2.8%, accuracy 0.799, tau/sigma   0.93, 10th/99th 504/1317 ms, no commitment 0.0%
+   S 0.25 R 1.247: mean RT   +10.5%, accuracy 0.795, tau/sigma   0.90, 10th/99th 527/1457 ms, no commitment 0.0%
+   S 0.25 R 1.297: mean RT   +19.6%, accuracy 0.798, tau/sigma   0.87, 10th/99th 532/1608 ms, no commitment 0.0%
+   S 0.25 R 1.4  : mean RT   +41.1%, accuracy 0.774, tau/sigma   0.83, 10th/99th 534/2049 ms, no commitment 0.0%
+   S 0.5  R 1.0  : mean RT   -29.8%, accuracy 0.779, tau/sigma   0.56, 10th/99th 386/742 ms, no commitment 0.0%
+   S 0.5  R 1.1  : mean RT   -14.2%, accuracy 0.792, tau/sigma   0.91, 10th/99th 450/1036 ms, no commitment 0.0%
+   S 0.5  R 1.156: mean RT    -0.9%, accuracy 0.800, tau/sigma   1.10, 10th/99th 494/1284 ms, no commitment 0.0%
+   S 0.5  R 1.2  : mean RT   +11.2%, accuracy 0.807, tau/sigma   0.88, 10th/99th 527/1470 ms, no commitment 0.0%
+   S 0.5  R 1.247: mean RT   +31.3%, accuracy 0.790, tau/sigma   0.86, 10th/99th 528/1868 ms, no commitment 0.0%
+   S 0.5  R 1.297: mean RT   +52.2%, accuracy 0.764, tau/sigma   0.76, 10th/99th 533/2279 ms, no commitment 0.0%
+   S 0.5  R 1.4  : mean RT  +175.5%, accuracy 0.537, tau/sigma  18.91, 10th/99th 534/7359 ms, no commitment 2.0%
+   S 1.0  R 1.0  : mean RT   -41.6%, accuracy 0.743, tau/sigma   0.34, 10th/99th 323/597 ms, no commitment 0.0%
+   S 1.0  R 1.1  : mean RT   -14.2%, accuracy 0.792, tau/sigma   0.88, 10th/99th 449/1038 ms, no commitment 0.0%
+   S 1.0  R 1.156: mean RT   +13.0%, accuracy 0.799, tau/sigma   0.93, 10th/99th 517/1530 ms, no commitment 0.0%
+   S 1.0  R 1.2  : mean RT   +48.5%, accuracy 0.769, tau/sigma   0.83, 10th/99th 531/2221 ms, no commitment 0.0%
+   S 1.0  R 1.247: mean RT  +125.8%, accuracy 0.642, tau/sigma   8.88, 10th/99th 528/4438 ms, no commitment 0.0%
+   S 1.0  R 1.297: mean RT  +171.8%, accuracy 0.505, tau/sigma  22.35, 10th/99th 531/7500 ms, no commitment 4.4%
+   S 1.0  R 1.4  : mean RT  +171.8%, accuracy 0.505, tau/sigma  22.35, 10th/99th 531/7500 ms, no commitment 4.4%

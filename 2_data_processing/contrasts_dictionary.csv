@@ -1,0 +1,7 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+dataset,DataPrep key.,,text; 0 missing
+task,Task.,,text; 0 missing
+axis,Axis of SKILL_vs_PRACTICE_explained.pdf moved by the contrast.,,drive level; instruction; item practice; practice; skill; 0 missing
+period_A,Condition A.,,text; 0 missing
+period_B,Condition B.,,"Grandmaster games; accuracy instruction; action video game players, day 1; coherence 0.448; coherence 0.512; day 4 (last quarter); high frequency words; last quarter; 0 missing"

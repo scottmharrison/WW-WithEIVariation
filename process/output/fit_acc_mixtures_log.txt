@@ -1,0 +1,5 @@
+F1 fitted
+P2 fitted
+P4 fitted
+P3 fitted
+S2 fitted

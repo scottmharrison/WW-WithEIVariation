@@ -1,0 +1,16 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+start_condition,WW-CarefulFitting condition id that starts the fit.,,text; 0 missing
+reason,Why that condition.,,text; 0 missing
+W_self,Fitted parameter W_self of that condition (WW-CarefulFitting units).,,0.24008 to 0.289; 0 missing
+W_inhib,Fitted parameter W_inhib of that condition (WW-CarefulFitting units).,,-0.12565 to -0.02184; 0 missing
+u0,Fitted parameter u0 of that condition (WW-CarefulFitting units).,,23.9417 to 40; 0 missing
+u0_sd,Fitted parameter u0_sd of that condition (WW-CarefulFitting units).,,1.35024 to 14.9912; 0 missing
+logN,Fitted parameter logN of that condition (WW-CarefulFitting units).,,0.03107 to 4.2059; 0 missing
+N_logsd,Fitted parameter N_logsd of that condition (WW-CarefulFitting units).,,1.11147 to 3.23844; 0 missing
+s_W,Fitted parameter s_W of that condition (WW-CarefulFitting units).,,674.526 to 9466.68; 0 missing
+rho_max,Fitted parameter rho_max of that condition (WW-CarefulFitting units).,,0.01015 to 0.46875; 0 missing
+sigL,Fitted parameter sigL of that condition (WW-CarefulFitting units).,,0.01114 to 0.86641; 0 missing
+ter_mu,Fitted parameter ter_mu of that condition (WW-CarefulFitting units).,,-55.2241 to 258.038; 0 missing
+ter_sd,Fitted parameter ter_sd of that condition (WW-CarefulFitting units).,,12.0435 to 78.2753; 0 missing
+u_star,Fitted parameter u_star of that condition (WW-CarefulFitting units).,,2.7983 to 23.9886; 0 missing

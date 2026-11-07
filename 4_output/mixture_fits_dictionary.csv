@@ -1,0 +1,16 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+model,Changes allowed (07_fit_mixtures.py).,,P; S; SP; SP+drive; SP+drive+ndt; SP+ndt; SP+retrieval; 0 missing
+k,Number of changed parameters.,,1 to 4; 0 missing
+change_s,Skill: log factor on u0_sd.,log,-3 to 0.9941; 0 missing
+change_p,Practice: change in logN.,log,-5 to 6; 0 missing
+change_d,Drive level: log factor on u0 and u0_sd.,log,-0.5289 to 0.6664; 0 missing
+change_t,Non-decision shift.,ms,-300 to 208.02; 0 missing
+change_r,Retrieval: log factor on s_W.,log,-2.0045 to 0.0625; 0 missing
+chi2,"Chi-square over 7 percentiles, data and simulation SE.",,0.068 to 3412.75; 0 missing
+df,7 - k.,,3 to 6; 0 missing
+p,Chi-square p.,,0 to 0.99922; 0 missing
+aic,chi2 + 2k.,,3.324 to 3414.75; 0 missing
+rms_pct,RMS of predicted minus observed change.,%,0.24 to 218.576; 0 missing
+adequate,p > .05.,,False; True; 0 missing
+at_bound,Changes at a search bound.,,p; s; t; 103 missing

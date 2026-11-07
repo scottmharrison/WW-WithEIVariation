@@ -1,0 +1,12 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+axis,Axis moved.,,drive level; instruction; item practice; practice; skill; 0 missing
+percentile,Percentile.,,5 to 99; 0 missing
+n_A,"Trials in A, pooled over units.",trials,660 to 464987; 0 missing
+n_B,Trials in B.,trials,1028 to 464987; 0 missing
+q_A_ms,Percentile of pooled A.,ms,135.593 to 4971.75; 0 missing
+q_B_ms,Percentile of pooled B.,ms,135.593 to 3335.2; 0 missing
+change_pct,100 (q_B / q_A - 1).,%,-63.636 to 523.402; 0 missing
+se_pct,Cluster-bootstrap SE over units.,%,0.32 to 45.948; 0 missing
+low_pct,2.5th percentile of the bootstrap.,%,-72.727 to 454.236; 0 missing
+high_pct,97.5th percentile.,%,-60.748 to 637.449; 0 missing

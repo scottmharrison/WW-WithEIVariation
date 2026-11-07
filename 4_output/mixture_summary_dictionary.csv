@@ -1,0 +1,14 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+axis,Axis moved.,,drive level; instruction; item practice; practice; skill; 0 missing
+calibration_rms_log,RMS log error of the calibrated model A against pooled A percentiles.,log ms,0.0026 to 0.0974; 0 missing
+two_additions_adequate,SP+drive+ndt adequate.,,True; 0 missing
+few_units,"Units, where 2 or 3; else empty.",units,2 to 3; 13 missing
+instance_share_A,Share of calibrated A's simulated trials won by the instance route.,proportion,0 to 0.5808; 0 missing
+sp_adequate,Skill + practice adequate.,,False; True; 0 missing
+sp_p,Its p.,,0 to 0.99922; 0 missing
+needed,Where SP adequate: either / skill / practice / both; else not adequate.,,both; either; not adequate; practice; skill; 0 missing
+best_addition,"Where SP not adequate: adequate SP+X with lowest AIC, or none adequate.",,SP+drive; SP+ndt; none adequate; 6 missing
+lowest_aic_model,Model with the lowest AIC.,,P; SP; SP+drive; SP+drive+ndt; SP+ndt; 0 missing
+sp_change_s,SP fit: skill change.,log,-3 to 0.9924; 0 missing
+sp_change_p,SP fit: practice change.,log,-2.3225 to 6; 0 missing

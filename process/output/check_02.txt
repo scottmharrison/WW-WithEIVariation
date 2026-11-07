@@ -1,0 +1,7 @@
+ratcliff1998: strength, largest difference in share between first and last quarter = 0.9 points (33 values)
+keuleers2012: condition, largest difference in share between first and last quarter = 0.1 points (2 values)
+cochrane2023: condition, largest difference in share between first and last quarter = 1.0 points (7 values)
+wolfe2010: set_size, largest difference in share between first and last quarter = 0.6 points (4 values)
+rouder2008: set_size, largest difference in share between first and last quarter = 0.8 points (3 values)
+pratte2010: condition, largest difference in share between first and last quarter = 0.3 points (3 values)
+enkavi2019_threebytwo: switch_type, largest difference in share between first and last quarter = 0.5 points (4 values)

@@ -1,0 +1,14 @@
+column,description,units,valid_values
+contrast,Contrast id (within-unit contrasts only).,,text; 0 missing
+unit,Unit.,,text; 0 missing
+n_cells,Cells averaged.,,1 to 2; 0 missing
+q05_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 5th percentile, mean over cells.",%,-93.72 to 404.064; 0 missing
+q10_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 10th percentile, mean over cells.",%,-87.526 to 254.852; 0 missing
+q25_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 25th percentile, mean over cells.",%,-57.4 to 121.401; 0 missing
+q50_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 50th percentile, mean over cells.",%,-57.783 to 96.875; 0 missing
+q75_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 75th percentile, mean over cells.",%,-59.68 to 153.293; 0 missing
+q90_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 90th percentile, mean over cells.",%,-61.273 to 434.526; 0 missing
+q99_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), 99th percentile, mean over cells.",%,-79.453 to 635.552; 0 missing
+mu_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), ex-Gaussian mu, mean over cells; nan for sigma or tau when its period-A value is < 2 ms.",%,-80.763 to 264.275; 0 missing
+sigma_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), ex-Gaussian sigma, mean over cells; nan for sigma or tau when its period-A value is < 2 ms.",%,-100 to 1853.46; 42 missing
+tau_change_pct,"Percent change from A to B (see 03_summarise_contrasts.py), ex-Gaussian tau, mean over cells; nan for sigma or tau when its period-A value is < 2 ms.",%,-99.915 to 6192.09; 80 missing

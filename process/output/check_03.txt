@@ -1,0 +1,5 @@
+(1) sigma0 = 2.635 mV: RMS to reduced phi 2.49 Hz over 0-60 Hz; derived (a,b,d) = [3.12985e+02 1.28460e+02 2.03000e-01] vs (270, 108, 0.154)
+   kappa 1: slope change at S=0.5, R=1.247: +6.0%; R=1.114: +2.2%
+   kappa 3: slope change at S=0.5, R=1.247: +14.0%; R=1.114: +13.8%
+   kappa 10: slope change at S=0.5, R=1.247: +39.8%; R=1.114: +37.0%
+   kappa 30: slope change at S=0.5, R=1.247: +23.3%; R=1.114: +81.2%
