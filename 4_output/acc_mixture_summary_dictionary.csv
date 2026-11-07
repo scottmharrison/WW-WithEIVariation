@@ -1,0 +1,13 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+axis,Axis moved.,,drive level; instruction; item practice; practice; skill; 0 missing
+has_accuracy,Accuracy observed.,,False; True; 0 missing
+n_error_terms,Error-RT percentiles in the chi-square.,,0 to 5; 0 missing
+calibration_rms_log,RMS log error of model A against observed A correct-RT percentiles.,log ms,0.0069 to 0.1035; 0 missing
+accuracy_A_observed,Observed accuracy in A.,proportion,0.64202 to 0.97951; 2 missing
+accuracy_A_model,Calibrated model accuracy in A.,proportion,0.4834 to 0.9696; 0 missing
+sp_adequate,Skill + practice adequate.,,False; True; 0 missing
+needed,Where SP adequate: either / skill / practice / both.,,both; either; not adequate; skill; 0 missing
+best_single_addition,"Where SP not adequate: adequate single addition with lowest AIC, or none adequate.",,SP+drive; SP+ndt; none adequate; 5 missing
+lowest_aic_model,Model with the lowest AIC.,,SP; SP+control+ndt; SP+drive; SP+drive+ndt; SP+evidence; SP+ndt; 0 missing
+adequate_models,All adequate models.,,S;P;SP;SP+drive;SP+evidence;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt; S;SP;SP+drive;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt; SP+drive;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt; SP+drive;SP+ndt;SP+drive+ndt; SP;SP+drive;SP+evidence;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt; 7 missing

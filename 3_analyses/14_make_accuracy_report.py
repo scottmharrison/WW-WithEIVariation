@@ -99,28 +99,30 @@ fails = [c for c in cids if summ[c]["sp_adequate"] != "True"]
 best = Counter(summ[c]["best_single_addition"] for c in fails)
 adequate_each = {m: sum(fits[(c, m)]["adequate"] == "True" for c in fails) for m in ["SP+drive", "SP+evidence", "SP+control", "SP+ndt", "SP+control+ndt", "SP+drive+ndt"]}
 with_acc = [c for c in cids if summ[c]["has_accuracy"] == "True"]
+q_ctl = sum(fits[(c, "SP+control")]["adequate"] == "True" for c in cids)
 fig = plt.figure(figsize=(WIDTH, 9.3))
 fig.text(0, 0.985, "Skill, practice and what else: fits with accuracy", fontsize=13, weight="bold", va="top")
-fig.text(0, 0.957, f"{len(cids)} contrasts; {len(with_acc)} with accuracy and error RTs. Model: extended Wong-Wang with evidence, "
-         "choices and the control signal of Lo, Wang & Wang (2015).", fontsize=8.2, va="top", color="#444444")
+fig.text(0, 0.957, f"{len(cids)} contrasts; {len(with_acc)} with accuracy and error RTs. Extended Wong-Wang model with evidence,\n"
+         "choices and the E/I control signal of Lo, Wang & Wang (2015).", fontsize=8.2, va="top", color="#444444")
 rows = [("Question", "Measured", ""),
         ("Skill + practice produce correct RTs, accuracy\nand error RTs adequately (p > .05)", f"{q_sp} of {len(cids)} contrasts", category(q_sp, len(cids))),
-        ("Where they do not: lowest-AIC adequate single\naddition", "; ".join(f"{SHORT[k].replace('SP + ', '')}: {v}" if k in SHORT else f"{k}: {v}" for k, v in sorted(best.items())), ""),
-        ("Where they do not: adequate with each addition", "; ".join(f"{SHORT[m].replace('SP + ', '')}: {v}" for m, v in adequate_each.items()), f"of {len(fails)}")]
-y = 0.915
+        ("Skill + practice + E/I control signal together\nadequate (p > .05)", f"{q_ctl} of {len(cids)} contrasts", category(q_ctl, len(cids))),
+        ("Where skill + practice fail: lowest-AIC adequate\nsingle addition", "; ".join(f"{SHORT[k].replace('SP + ', '')}: {v}" if k in SHORT else f"{k}: {v}" for k, v in sorted(best.items())), ""),
+        ("Where skill + practice fail: adequate with each\naddition", "; ".join(f"{SHORT[m].replace('SP + ', '')}: {v}" for m, v in adequate_each.items()), f"of {len(fails)}")]
+y = 0.905
 fig.add_artist(plt.Line2D([0, 1], [y + 0.012, y + 0.012], color="black", lw=0.8))
 for i, row in enumerate(rows):
     for cx, v in zip([0, 0.47, 0.9], row):
         fig.text(cx, y, textwrap.fill(v, 60) if cx == 0.47 else v, va="top", fontsize=8.0, weight="bold" if i == 0 else "normal")
     if i == 0:
         fig.add_artist(plt.Line2D([0, 1], [y - 0.022, y - 0.022], color="black", lw=0.8))
-    y -= 0.035 if i == 0 else 0.052
+    y -= 0.035 if i == 0 else 0.05
 fig.add_artist(plt.Line2D([0, 1], [y + 0.018, y + 0.018], color="black", lw=0.8))
 y -= 0.01
 fig.text(0, y, "Per contrast", weight="bold", va="top")
 y -= 0.028
-heads = ["Id", "Task", "Change", "Accuracy A → B", "Skill + practice", "Lowest AIC"]
-xs = [0, 0.06, 0.33, 0.52, 0.68, 0.84]
+heads = ["Id", "Task", "Change", "Accuracy A → B", "Skill + practice", "SP + E/I (p)", "Lowest AIC"]
+xs = [0, 0.055, 0.29, 0.45, 0.6, 0.74, 0.85]
 for cx, h in zip(xs, heads):
     fig.text(cx, y, h, weight="bold", fontsize=7.3, va="top")
 fig.add_artist(plt.Line2D([0, 1], [y - 0.016, y - 0.016], color="black", lw=0.6))
@@ -131,7 +133,8 @@ for c in cids:
     acc_txt = f"{float(acc[0]['value_A']):.3f} → {float(acc[0]['value_B']):.3f}" if acc else "not observed"
     verdict = s["needed"] if s["sp_adequate"] == "True" else f"no; {SHORT.get(s['best_single_addition'], s['best_single_addition']).replace('SP + ', '+ ')}"
     vals = [c, textwrap.shorten(info[c]["task"], 26, placeholder="…"), AXIS_LABEL[info[c]["axis"]].replace("Speed vs accuracy instruction", "Instruction"),
-            acc_txt, verdict, SHORT[s["lowest_aic_model"]]]
+            acc_txt, verdict, f"{'yes' if fits[(c, 'SP+control')]['adequate'] == 'True' else 'no'} ({float(fits[(c, 'SP+control')]['p']):.2g})",
+            SHORT[s["lowest_aic_model"]]]
     for cx, v in zip(xs, vals):
         fig.text(cx, y, v, fontsize=7.0, va="top")
     y -= 0.0185
@@ -143,6 +146,8 @@ notes = ["Skill = drive spread u0_sd (u0 fixed); practice = stored instances log
          "Chi-square over correct-RT percentiles, accuracy change and error-RT percentiles (where A and B each have >= 100 errors), "
          "with data and simulation error; AIC = chi-square + 2 x changes.",
          "No accuracy: P3 (BLP errors have no RT in DataPrep) and S1 (StarCraft 2); these are fitted on correct RTs only.",
+         "Optimiser checks pending: D1 (practice at its bound; adding evidence predicts accuracy falling) and P8 (E/I fit at strength 0 "
+         "scores far better than skill + practice, which it contains); their fits may not be the best attainable.",
          "Sources: 4_output/acc_mixture_summary.csv, acc_mixture_fits.csv, pooled_accuracy_profiles.csv."]
 y -= 0.015
 for k, n in enumerate(notes, 1):
@@ -189,8 +194,9 @@ for ax in (a1, a2):
     ax.axhline(0, color="black", lw=0.5); ax.axvline(0, color="black", lw=0.5); minor(ax)
 a1.set_xlabel("Change in median correct RT (%)"); a1.set_ylabel("Change in accuracy (points)")
 a2.set_xlabel("Change in median correct RT (%)"); a2.set_ylabel("Change in 99th percentile (%)")
-a1.legend(frameon=False, fontsize=6, loc="upper center", bbox_to_anchor=(1.1, -0.2), ncol=3)
-fig.tight_layout(rect=(0, 0.12, 1, 1))
+handles, labels = a1.get_legend_handles_labels()
+fig.legend(handles, labels, frameon=False, fontsize=6.5, loc="lower center", ncol=3)
+fig.tight_layout(rect=(0, 0.16, 1, 1))
 figures.append(("acc_fig2_ingredients", fig))
 captions["acc_fig2_ingredients"] = ("Figure 2. What each ingredient does. One step of each change from every contrast's "
     "calibrated A (small points; large = median over contrasts). Left: speed against accuracy, where ingredients that make the same "
@@ -202,7 +208,7 @@ for ax, c in zip(axes.ravel(), cids):
     q, se = obs(c, "correct_rt_pct")
     ax.fill_between(range(7), q - 1.96 * se, q + 1.96 * se, color="#DDDDDD", lw=0)
     ax.plot(range(7), q, "o", ms=3, color="black")
-    best_add = min(["SP+drive", "SP+evidence", "SP+control", "SP+ndt"], key=lambda m: float(fits[(c, m)]["aic"]))
+    best_add = "SP+control"  # the combined model: skill + practice + E/I control signal
     for m, ls in [("SP", "-"), (best_add, "-")]:
         ax.plot(range(7), res[c]["fits"][m]["predicted_correct_pct"], ls, lw=1.1, color=COL[m])
     acc_txt = ""
@@ -215,14 +221,14 @@ for ax, c in zip(axes.ravel(), cids):
     ax.axhline(0, color="black", lw=0.4)
     ax.set_xticks(range(7)); ax.set_xticklabels(PCTS, fontsize=6); ax.tick_params(labelsize=6)
     ax.yaxis.set_minor_locator(AutoMinorLocator())
-h = [plt.Line2D([], [], marker="o", ls="", color="black")] + [plt.Line2D([], [], color=COL[m]) for m in ["SP", "SP+drive", "SP+evidence", "SP+control", "SP+ndt"]]
-fig.legend(h, ["observed"] + [LABEL[m] for m in ["SP", "SP+drive", "SP+evidence", "SP+control", "SP+ndt"]], loc="lower center", ncol=3, frameon=False, fontsize=7)
+h = [plt.Line2D([], [], marker="o", ls="", color="black")] + [plt.Line2D([], [], color=COL[m]) for m in ["SP", "SP+control"]]
+fig.legend(h, ["observed", "skill + practice", "skill + practice + E/I control signal"], loc="lower center", ncol=3, frameon=False, fontsize=7)
 fig.supxlabel("Percentile of correct RTs", fontsize=8, y=0.065); fig.supylabel("Change, B relative to A (%)", fontsize=8)
 fig.tight_layout(rect=(0, 0.075, 1, 1))
 figures.append(("acc_fig3_fits", fig))
 captions["acc_fig3_fits"] = ("Figure 3. The fits. Observed change in correct-RT percentiles (points; band = 95% interval), "
-    "skill + practice (black) and the single addition with the lowest AIC (coloured). Titles: chi-square p of each, and the observed "
-    "and predicted change in accuracy (points).")
+    "skill + practice (black) and skill + practice + E/I control signal (orange), each fitted to correct RTs, accuracy and error RTs "
+    "together. Titles: chi-square p of each, and the observed and predicted change in accuracy (points).")
 
 # ---- Figure 4: adequacy matrix ------------------------------------------------------------------------------------
 fig, ax = plt.subplots(figsize=(WIDTH, 4.8))

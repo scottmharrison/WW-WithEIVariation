@@ -1,0 +1,17 @@
+contrast,axis,has_accuracy,n_error_terms,calibration_rms_log,accuracy_A_observed,accuracy_A_model,sp_adequate,needed,best_single_addition,lowest_aic_model,adequate_models
+P1,practice,True,5,0.0116,0.71168,0.7044,False,not adequate,SP+drive,SP+drive+ndt,SP+drive;SP+ndt;SP+drive+ndt
+P2,practice,True,5,0.0092,0.90976,0.9096,False,not adequate,none adequate,SP+control+ndt,
+P3,practice,False,0,0.0096,,0.4834,True,both,,SP,SP;SP+drive;SP+evidence;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+P4,practice,True,5,0.0415,0.67457,0.6535,False,not adequate,SP+ndt,SP+ndt,SP+drive;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+P5,practice,True,5,0.1035,0.97688,0.913,True,either,,SP,S;P;SP;SP+drive;SP+evidence;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+P6,practice,True,5,0.0088,0.82559,0.8292,True,both,,SP+evidence,SP;SP+drive;SP+evidence;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+P7,practice,True,5,0.0168,0.97951,0.9656,False,not adequate,SP+drive,SP+drive,SP+drive;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+P8,practice,True,5,0.0355,0.83959,0.8374,False,not adequate,none adequate,SP+evidence,
+P9,practice,True,5,0.0148,0.96826,0.9696,True,either,,SP+evidence,S;P;SP;SP+drive;SP+evidence;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+A1,instruction,True,5,0.0112,0.69892,0.6982,False,not adequate,none adequate,SP+ndt,
+A2,instruction,True,5,0.0112,0.84288,0.847,False,not adequate,none adequate,SP+control+ndt,
+F1,item practice,True,5,0.0177,0.76637,0.7686,False,not adequate,none adequate,SP+evidence,
+S1,skill,False,0,0.0933,,0.5263,False,not adequate,SP+drive,SP+drive,SP+drive;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+S2,skill,True,5,0.0188,0.66988,0.6737,True,skill,,SP+ndt,S;SP;SP+drive;SP+control;SP+ndt;SP+control+ndt;SP+drive+ndt
+D1,drive level,True,0,0.0177,0.64202,0.6452,False,not adequate,none adequate,SP,
+D2,drive level,True,5,0.0069,0.72783,0.7304,False,not adequate,none adequate,SP+evidence,

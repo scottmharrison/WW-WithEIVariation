@@ -1,0 +1,113 @@
+contrast,ingredient,median_change_pct,q99_change_pct,accuracy_change
+P1,skill (u0_sd x 0.5),-3.167,-68.467,-0.0136
+P1,practice (logN + 2),-0.171,-6.981,-0.0062
+P1,"drive (u0, u0_sd x 1.3)",-17.695,-7.845,-0.0184
+P1,evidence (+4 Hz),-5.357,-44.064,0.2044
+P1,"control, excitatory (S 0.5, R 1.05)",-26.48,-73.138,-0.058
+P1,"control, inhibitory (S 0.5, R 1.3)",111.188,277.823,0.08204
+P1,non-decision (-50 ms),-10.309,-1.211,0.0
+P2,skill (u0_sd x 0.5),-0.729,-52.083,0.00042
+P2,practice (logN + 2),-3.147,-3.579,0.00242
+P2,"drive (u0, u0_sd x 1.3)",-12.925,-7.899,-0.04858
+P2,evidence (+4 Hz),-5.132,-26.469,0.06882
+P2,"control, excitatory (S 0.5, R 1.05)",-18.636,-54.788,-0.07378
+P2,"control, inhibitory (S 0.5, R 1.3)",57.675,453.342,0.05128
+P2,non-decision (-50 ms),-8.322,-2.515,0.0
+P3,skill (u0_sd x 0.5),2.577,-27.619,0.0148
+P3,practice (logN + 2),-15.395,-30.484,0.017
+P3,"drive (u0, u0_sd x 1.3)",-12.189,-12.216,0.0148
+P3,evidence (+4 Hz),-2.089,-11.243,0.255
+P3,"control, excitatory (S 0.5, R 1.05)",-16.648,-31.891,0.0036
+P3,"control, inhibitory (S 0.5, R 1.3)",28.82,71.659,0.0134
+P3,non-decision (-50 ms),-8.034,-3.514,0.0
+P4,skill (u0_sd x 0.5),-1.03,-50.134,-0.00226
+P4,practice (logN + 2),-1.329,-1.048,0.01074
+P4,"drive (u0, u0_sd x 1.3)",-15.889,-9.349,-0.02206
+P4,evidence (+4 Hz),-7.604,-33.727,0.26034
+P4,"control, excitatory (S 0.5, R 1.05)",-22.867,-57.127,-0.02666
+P4,"control, inhibitory (S 0.5, R 1.3)",75.025,372.499,0.06769
+P4,non-decision (-50 ms),-7.27,-1.963,0.0
+P5,skill (u0_sd x 0.5),-3.388,-31.201,-0.0156
+P5,practice (logN + 2),-2.472,-6.66,-0.0302
+P5,"drive (u0, u0_sd x 1.3)",-11.69,-3.767,-0.0152
+P5,evidence (+4 Hz),-8.235,-35.092,0.0638
+P5,"control, excitatory (S 0.5, R 1.05)",-18.365,-57.523,-0.0486
+P5,"control, inhibitory (S 0.5, R 1.3)",32.829,316.773,-0.04605
+P5,non-decision (-50 ms),-9.816,-1.894,0.0
+P6,skill (u0_sd x 0.5),-0.321,-21.786,-0.00117
+P6,practice (logN + 2),-8.316,-13.571,-0.05877
+P6,"drive (u0, u0_sd x 1.3)",-28.997,-37.273,-0.01897
+P6,evidence (+4 Hz),-20.203,-39.759,0.13883
+P6,"control, excitatory (S 0.5, R 1.05)",-40.025,-54.683,-0.04197
+P6,"control, inhibitory (S 0.5, R 1.3)",177.143,322.251,-0.12445
+P6,non-decision (-50 ms),-3.614,-1.191,0.0
+P7,skill (u0_sd x 0.5),-0.618,-45.132,-0.0018
+P7,practice (logN + 2),1.125,-2.188,0.0002
+P7,"drive (u0, u0_sd x 1.3)",-15.158,-6.116,-0.0142
+P7,evidence (+4 Hz),-10.093,-31.26,0.032
+P7,"control, excitatory (S 0.5, R 1.05)",-22.719,-50.957,-0.0324
+P7,"control, inhibitory (S 0.5, R 1.3)",64.21,505.734,0.02474
+P7,non-decision (-50 ms),-8.628,-2.469,0.0
+P8,skill (u0_sd x 0.5),0.049,-4.953,-0.0072
+P8,practice (logN + 2),-3.639,-2.388,-0.009
+P8,"drive (u0, u0_sd x 1.3)",-26.605,-29.63,-0.0374
+P8,evidence (+4 Hz),-18.707,-33.579,0.1308
+P8,"control, excitatory (S 0.5, R 1.05)",-39.796,-44.928,-0.056
+P8,"control, inhibitory (S 0.5, R 1.3)",175.793,446.613,-0.01944
+P8,non-decision (-50 ms),-0.923,-0.305,0.0
+P9,skill (u0_sd x 0.5),-0.156,-19.894,-0.0082
+P9,practice (logN + 2),0.566,2.24,-0.002
+P9,"drive (u0, u0_sd x 1.3)",-15.252,-15.729,-0.034
+P9,evidence (+4 Hz),-6.99,-16.112,0.0266
+P9,"control, excitatory (S 0.5, R 1.05)",-24.005,-38.69,-0.0616
+P9,"control, inhibitory (S 0.5, R 1.3)",93.861,840.608,0.02895
+P9,non-decision (-50 ms),-7.822,-4.262,0.0
+A1,skill (u0_sd x 0.5),-1.03,-17.314,-0.0032
+A1,practice (logN + 2),-0.679,-2.43,0.007
+A1,"drive (u0, u0_sd x 1.3)",-24.087,-25.218,-0.0302
+A1,evidence (+4 Hz),-4.169,-6.705,0.2008
+A1,"control, excitatory (S 0.5, R 1.05)",-30.358,-37.787,-0.0474
+A1,"control, inhibitory (S 0.5, R 1.3)",103.341,369.624,0.11605
+A1,non-decision (-50 ms),-2.338,-1.566,0.0
+A2,skill (u0_sd x 0.5),-0.944,-27.983,0.0072
+A2,practice (logN + 2),-0.499,-3.375,0.003
+A2,"drive (u0, u0_sd x 1.3)",-19.832,-25.426,-0.034
+A2,evidence (+4 Hz),-6.036,-17.684,0.1228
+A2,"control, excitatory (S 0.5, R 1.05)",-25.964,-44.788,-0.0752
+A2,"control, inhibitory (S 0.5, R 1.3)",106.146,1002.313,0.12159
+A2,non-decision (-50 ms),-9.785,-5.009,0.0
+F1,skill (u0_sd x 0.5),-1.91,-58.108,-0.03318
+F1,practice (logN + 2),-4.361,8.728,0.01888
+F1,"drive (u0, u0_sd x 1.3)",-13.085,-11.786,-0.04082
+F1,evidence (+4 Hz),-4.237,-28.138,0.14922
+F1,"control, excitatory (S 0.5, R 1.05)",-17.8,-56.048,-0.06378
+F1,"control, inhibitory (S 0.5, R 1.3)",51.917,412.478,0.08069
+F1,non-decision (-50 ms),-8.34,-2.329,0.0
+S1,skill (u0_sd x 0.5),8.993,-47.702,-0.02457
+S1,practice (logN + 2),-44.087,-46.938,-0.01107
+S1,"drive (u0, u0_sd x 1.3)",-23.737,-33.536,-0.01275
+S1,evidence (+4 Hz),-6.206,-41.583,0.21511
+S1,"control, excitatory (S 0.5, R 1.05)",-33.506,-65.198,-0.00357
+S1,"control, inhibitory (S 0.5, R 1.3)",38.826,102.348,-0.00044
+S1,non-decision (-50 ms),-0.044,-0.025,0.0
+S2,skill (u0_sd x 0.5),-0.734,-41.445,-0.00933
+S2,practice (logN + 2),-0.104,-3.233,-0.00113
+S2,"drive (u0, u0_sd x 1.3)",-15.968,-14.255,-0.02413
+S2,evidence (+4 Hz),-7.99,-30.134,0.26327
+S2,"control, excitatory (S 0.5, R 1.05)",-23.667,-53.356,-0.04673
+S2,"control, inhibitory (S 0.5, R 1.3)",91.72,409.147,0.0861
+S2,non-decision (-50 ms),-6.878,-2.292,0.0
+D1,skill (u0_sd x 0.5),0.124,1.021,0.0124
+D1,practice (logN + 2),-16.974,-7.364,-0.0752
+D1,"drive (u0, u0_sd x 1.3)",-15.686,-18.443,0.009
+D1,evidence (+4 Hz),-7.83,-11.807,0.1772
+D1,"control, excitatory (S 0.5, R 1.05)",-22.231,-28.886,0.0116
+D1,"control, inhibitory (S 0.5, R 1.3)",55.401,111.836,-0.0292
+D1,non-decision (-50 ms),-6.24,-3.567,0.0
+D2,skill (u0_sd x 0.5),-1.507,-31.92,-0.0006
+D2,practice (logN + 2),-3.769,-5.583,0.0278
+D2,"drive (u0, u0_sd x 1.3)",-26.074,-29.716,-0.0404
+D2,evidence (+4 Hz),-11.896,-32.874,0.2062
+D2,"control, excitatory (S 0.5, R 1.05)",-33.356,-52.999,-0.0494
+D2,"control, inhibitory (S 0.5, R 1.3)",116.202,462.037,0.0615
+D2,non-decision (-50 ms),-5.03,-1.913,0.0

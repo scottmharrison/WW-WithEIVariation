@@ -16,7 +16,7 @@ Depends on
     03_summarise_contrasts.py
 
 Last substantive change
-    2026-11-06 — added the pooled profiles, baselines and mixture tables.
+    2026-11-07 — added the control-signal, accuracy-profile and accuracy-fit tables.
 
 Run from the project root.
 """
@@ -96,6 +96,25 @@ TABLES = {
     "2_data_processing/contrast_trials_acc.csv": [("contrast", "Contrast id.", ""), ("unit", "Unit.", ""), ("cell", "Cell.", ""),
                                                   ("period", "A or B.", ""), ("rt_s", "Reaction time.", "s"),
                                                   ("correct", "1 correct, 0 error, empty where accuracy is not recorded.", "")],
+    "4_output/acc_mixture_fits.csv": [("contrast", "Contrast id.", ""), ("model", "Changes allowed (12_fit_accuracy_mixtures.py).", ""),
+                                      ("k", "Number of changed parameters.", "")]
+        + [(f"change_{n}", d, u) for n, d, u in [("s", "Skill: log factor on u0_sd.", "log"), ("p", "Practice: change in logN.", "log"),
+                                                  ("d", "Common drive: log factor on u0 and u0_sd.", "log"), ("e", "Evidence change.", "Hz"),
+                                                  ("cS", "Control strength S.", ""), ("cR", "Control ratio R.", ""), ("t", "Non-decision shift.", "ms")]]
+        + [("chi2", "Chi-square over correct-RT percentiles, accuracy and error-RT percentiles.", ""), ("n_terms", "Terms in the chi-square.", ""),
+           ("df", "n_terms - k.", ""), ("p", "Chi-square p.", ""), ("aic", "chi2 + 2k.", ""), ("adequate", "p > .05.", ""),
+           ("predicted_accuracy_change", "Model accuracy B - A; empty without accuracy.", "proportion"), ("at_bound", "Changes at a search bound.", "")],
+    "4_output/acc_mixture_summary.csv": [("contrast", "Contrast id.", ""), ("axis", "Axis moved.", ""), ("has_accuracy", "Accuracy observed.", ""),
+                                         ("n_error_terms", "Error-RT percentiles in the chi-square.", ""),
+                                         ("calibration_rms_log", "RMS log error of model A against observed A correct-RT percentiles.", "log ms"),
+                                         ("accuracy_A_observed", "Observed accuracy in A.", "proportion"), ("accuracy_A_model", "Calibrated model accuracy in A.", "proportion"),
+                                         ("sp_adequate", "Skill + practice adequate.", ""), ("needed", "Where SP adequate: either / skill / practice / both.", ""),
+                                         ("best_single_addition", "Where SP not adequate: adequate single addition with lowest AIC, or none adequate.", ""),
+                                         ("lowest_aic_model", "Model with the lowest AIC.", ""), ("adequate_models", "All adequate models.", "")],
+    "4_output/acc_ingredient_steps.csv": [("contrast", "Starting point (calibrated A).", ""), ("ingredient", "One step of one change.", ""),
+                                          ("median_change_pct", "Simulated change in median correct RT.", "%"),
+                                          ("q99_change_pct", "Simulated change in 99th percentile.", "%"),
+                                          ("accuracy_change", "Simulated change in accuracy.", "proportion")],
 }
 
 for path, columns in TABLES.items():
