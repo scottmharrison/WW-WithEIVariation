@@ -1,0 +1,17 @@
+combinations: ['SP', 'SP+control', 'SP+drive', 'SP+evidence', 'SP+ndt', 'SP+threshold', 'SP+drive+evidence', 'SP+evidence+threshold', 'SP+evidence+urgency', 'SP+evidence+control+threshold', 'SP+drive+evidence+ndt', 'SP+evidence+threshold+lapse', 'SP+threshold+lapse+ndt', 'SP+drive+evidence+control+threshold+urgency+lapse+ndt']
+F1 fitted
+P7 fitted
+P4 fitted
+P3 fitted
+P2 fitted
+S2 fitted
+P8 fitted
+D1 fitted
+P1 fitted
+D2 fitted
+P9 fitted
+P6 fitted
+A1 fitted
+A2 fitted
+P5 fitted
+S1 fitted

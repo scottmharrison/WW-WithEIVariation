@@ -1,0 +1,2 @@
+F1 selected SP+evidence+threshold+control (p 0.0221); all mechanisms p 0.000594
+D1 selected SP+evidence+ndt+drive (p 0.997); all mechanisms p nan

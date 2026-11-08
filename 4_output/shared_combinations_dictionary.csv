@@ -1,0 +1,6 @@
+column,description,units,valid_values
+combination,Mechanisms added to skill + practice.,,text; 0 missing
+n_mechanisms,Number of mechanisms.,,0 to 7; 0 missing
+adequate_in,Contrasts where the combination is adequate.,contrasts,4 to 13; 0 missing
+total_aic,Sum of AIC over the 16 contrasts.,,383.48 to 3029.11; 0 missing
+failing,Contrasts where it is not adequate.,,text; 0 missing

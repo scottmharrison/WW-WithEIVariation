@@ -20,6 +20,7 @@ Inputs
 
 Outputs
     4_output/pooled_accuracy_profiles.csv — one row per contrast and measure (dictionary beside it)
+    with --fine: 4_output/pooled_accuracy_profiles_fine.csv, the same with 12 correct-RT percentiles
 
 Depends on
     2_data_processing/01_build_contrasts.py --with-errors
@@ -28,7 +29,7 @@ Seed
     SEED below.
 
 Last substantive change
-    2026-11-07 — first version.
+    2026-11-07 — --fine option (12 percentiles) for stage 15.
 
 Run from the project root.
 """
@@ -39,7 +40,12 @@ import numpy as np
 
 SEED = 61108
 N_BOOT = 500
-PCTS = [5, 10, 25, 50, 75, 90, 99]
+import sys
+# --fine: 12 correct-RT percentiles, for the mechanism comparison of stage 15, which fits models with up
+# to 13 changed parameters and so needs more observations than the 7 percentiles of stages 12-14.
+FINE = "--fine" in sys.argv
+PCTS = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99] if FINE else [5, 10, 25, 50, 75, 90, 99]
+OUT_FILE = "4_output/pooled_accuracy_profiles_fine.csv" if FINE else "4_output/pooled_accuracy_profiles.csv"
 ERR_PCTS = [10, 30, 50, 70, 90]
 MIN_ERRORS = 100
 # The British Lexicon Project table keeps only trials with an RT, and its error trials have none in
@@ -110,8 +116,8 @@ for cid in contrasts:
             add("error_rt_pct", p, mA[2][k], mB[2][k], 100 * (mB[2][k] / mA[2][k] - 1), boot_e[:, k])
     print(cid, f"accuracy {mA[0]:.3f} -> {mB[0]:.3f}; errors {mA[3]} / {mB[3]}; error RTs used: {use_err}")
 
-with open("4_output/pooled_accuracy_profiles.csv", "w", newline="") as f:
+with open(OUT_FILE, "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
     w.writeheader()
     w.writerows(rows)
-print(f"wrote {len(rows)} rows to 4_output/pooled_accuracy_profiles.csv")
+print(f"wrote {len(rows)} rows to {OUT_FILE}")

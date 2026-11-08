@@ -29,7 +29,7 @@ Depends on
     3_analyses/10_build_bsi_table.py
 
 Last substantive change
-    2026-11-07 — first version.
+    2026-11-07 — added free thresholds (circuit and instance route), urgency and lapses.
 """
 import csv
 from pathlib import Path
@@ -86,24 +86,29 @@ def phi(I, a=A_PHI, b=B_PHI, d=D_PHI):
     return np.where(small, 1.0 / d, xs / (1.0 - np.exp(-d * xs)))
 
 
-def simulate_ww(u0, e, ws, wl, t_max, rng, abd):
-    """Decision time (ms; inf = none) and winning pool (1 or 2; 0 = none) of the circuit route."""
+def simulate_ww(u0, e, ws, wl, t_max, rng, abd, thr=THR, urg=0.0):
+    """Decision time (ms; inf = none) and winning pool (1 or 2; 0 = none) of the circuit route.
+    e: evidence (Hz), one value or one per trial. thr: commitment rate (Hz). urg: urgency, a current
+    (nA per second of the trial) added to both pools, so the circuit is pushed harder the longer the
+    trial lasts (Churchland, Kiani & Shadlen, 2008, Nat Neurosci 11:693; Lo, Wang & Wang, 2015)."""
     u0 = np.asarray(u0, float)
     n = u0.size
     T = np.full(n, np.inf); W = np.zeros(n, dtype=np.int8)
     idx = np.arange(n)
     S1, S2, n1, n2 = (np.zeros(n) for _ in range(4))
+    e = np.broadcast_to(np.asarray(e, float), u0.shape)
     d1, d2 = J_EXT * (u0 + e / 2), J_EXT * (u0 - e / 2)
     dec, sc = 1.0 - 1.0 / NOISE_TAU, np.sqrt(1.0 / NOISE_TAU)
     for t in range(1, int(t_max) + 1):
         g = rng.standard_normal((2, idx.size))
         n1 = n1 * dec + NOISE_SD * sc * g[0]
         n2 = n2 * dec + NOISE_SD * sc * g[1]
-        r1 = phi(I_BG + d1 + ws * S1 + wl * S2 + n1, *abd)
-        r2 = phi(I_BG + d2 + ws * S2 + wl * S1 + n2, *abd)
+        u_t = urg * t / 1000.0
+        r1 = phi(I_BG + d1 + u_t + ws * S1 + wl * S2 + n1, *abd)
+        r2 = phi(I_BG + d2 + u_t + ws * S2 + wl * S1 + n2, *abd)
         S1 = S1 + (-S1 / TAU_S + GAMMA * (1 - S1) * r1 / 1000.0)
         S2 = S2 + (-S2 / TAU_S + GAMMA * (1 - S2) * r2 / 1000.0)
-        done = np.maximum(r1, r2) >= THR
+        done = np.maximum(r1, r2) >= thr
         if done.any():
             T[idx[done]] = t
             W[idx[done]] = np.where(r1[done] >= r2[done], 1, 2)
@@ -114,8 +119,9 @@ def simulate_ww(u0, e, ws, wl, t_max, rng, abd):
     return T, W
 
 
-def simulate_lca(rho1, rho2, onset, sigL, t_max, rng):
-    """Decision time (ms; inf = none) and winning unit (1, 2; 0 = none) of the instance route."""
+def simulate_lca(rho1, rho2, onset, sigL, t_max, rng, z=LCA_Z):
+    """Decision time (ms; inf = none) and winning unit (1, 2; 0 = none) of the instance route; z is its
+    threshold."""
     n = onset.size
     T = np.full(n, np.inf); W = np.zeros(n, dtype=np.int8)
     t0 = np.maximum(np.ceil(onset), 1.0)
@@ -132,7 +138,7 @@ def simulate_lca(rho1, rho2, onset, sigL, t_max, rng):
         nx2 = x2 + a * (r2 - LCA_K * x2 - LCA_BETA * x1) + sigL * sq * g[1]
         x1 = np.where(live, np.maximum(nx1, 0.0), x1)
         x2 = np.where(live, np.maximum(nx2, 0.0), x2)
-        hit = live & (np.maximum(x1, x2) >= LCA_Z)
+        hit = live & (np.maximum(x1, x2) >= z)
         out = live & ~hit & (t >= on + LCA_DEADLINE)
         T[idx[hit]] = t
         W[idx[hit]] = np.where(x1[hit] >= x2[hit], 1, 2)
@@ -145,12 +151,22 @@ def simulate_lca(rho1, rho2, onset, sigL, t_max, rng):
 
 def simulate_condition(th, n, t_max, seed, roam=True, lca=True):
     """n trials of one condition. th as in wwsim.py, plus optional 'e' (evidence, Hz), 'bsi_S', 'bsi_R',
-    'lca_bias' (instance route's input bias towards the correct answer; default BIAS).
+    'lca_bias' (instance route's input bias towards the correct answer; default BIAS), 'thr' (circuit
+    commitment rate, Hz; default THR), 'lca_z' (instance route threshold; default LCA_Z), 'urg' (urgency,
+    nA/s; default 0), 'p_lapse' and 'gain_lapse' (lapses: on a fraction p_lapse of trials, drawn
+    independently, the drive is u0 x gain_lapse and there is no evidence, so the choice is at chance;
+    after WW-NSGA2's lapse, whose noise scaling is not used here). A setting at its default draws no
+    extra random numbers, so results at the defaults are identical to before.
     Returns per-trial rt (ms; inf = none), choice (1 correct, 0 error, -1 none), route (1 instance)."""
     rng = np.random.default_rng(seed)
     u0 = np.full(n, th['u0'])
     if roam:
         u0 = np.clip(th['u0'] + th['u0_sd'] * rng.standard_normal(n), U0_LO, U0_HI)
+    e = np.full(n, th.get('e', 0.0))
+    if th.get('p_lapse', 0.0) > 0:
+        lapse = rng.random(n) < th['p_lapse']
+        u0 = np.where(lapse, u0 * th.get('gain_lapse', 0.5), u0)
+        e = np.where(lapse, 0.0, e)
     if lca:
         N = np.exp(th['logN'] + th['N_logsd'] * rng.standard_normal(n))
         rho_m = th['rho_max'] * N / (N + N_HALF)
@@ -158,11 +174,11 @@ def simulate_condition(th, n, t_max, seed, roam=True, lca=True):
         bias = th.get('lca_bias', BIAS)
         rho1, rho2 = g * rho_m * (1 + bias) / 2, g * rho_m * (1 - bias) / 2
         onset = th['s_W'] * N ** (-1.0 / C_W) * rng.weibull(C_W, n)
-        T_lca, W_lca = simulate_lca(rho1, rho2, onset, th['sigL'], t_max, rng)
+        T_lca, W_lca = simulate_lca(rho1, rho2, onset, th['sigL'], t_max, rng, th.get('lca_z', LCA_Z))
     else:
         T_lca, W_lca = np.full(n, np.inf), np.zeros(n, dtype=np.int8)
     abd = bsi_params(th.get('bsi_S', 0.0), th.get('bsi_R', 1.2))
-    T_ww, W_ww = simulate_ww(u0, th.get('e', 0.0), th['W_self'], th['W_inhib'], t_max, rng, abd)
+    T_ww, W_ww = simulate_ww(u0, e, th['W_self'], th['W_inhib'], t_max, rng, abd, th.get('thr', THR), th.get('urg', 0.0))
     a = (0.0 - th['ter_mu']) / th['ter_sd']
     ndt = NDT_FLOOR + stats.truncnorm.rvs(a, np.inf, loc=th['ter_mu'], scale=th['ter_sd'], size=n, random_state=rng)
     inst = T_lca < T_ww

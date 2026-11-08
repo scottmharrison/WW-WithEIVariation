@@ -1,0 +1,16 @@
+P9 selected SP (p 0.93); all mechanisms p 0.525
+P5 selected SP (p 0.961); all mechanisms p 0.19
+P2 selected SP+control (p 0.0573); all mechanisms p 0.00405
+P4 selected SP+threshold (p 0.998); all mechanisms p 0.687
+P7 selected SP+drive (p 0.83); all mechanisms p 0.328
+S2 selected SP+ndt (p 1); all mechanisms p 0.999
+P3 selected SP+drive (p 0.998); all mechanisms p nan
+F1 selected SP+evidence+threshold+control (p 0.0221); all mechanisms p 0.000594
+D1 selected SP+urgency (p 7.81e-76); all mechanisms p nan
+S1 selected SP+drive (p 0.000133); all mechanisms p nan
+D2 selected SP+evidence+threshold (p 0.93); all mechanisms p 0.277
+P6 selected SP+evidence (p 0.988); all mechanisms p 0.57
+P8 selected SP+evidence+urgency (p 0.489); all mechanisms p 0.000181
+P1 selected SP+drive+evidence (p 0.906); all mechanisms p 0.183
+A1 selected SP+ndt+lapse+threshold (p 0.945); all mechanisms p 0.451
+A2 selected SP+threshold+lapse+evidence (p 0.652); all mechanisms p 0.218

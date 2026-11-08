@@ -1,0 +1,15 @@
+combination,n_mechanisms,adequate_in,total_aic,failing
+SP,0,4,3029.11,P1;P2;P4;P7;P8;A1;A2;F1;S1;S2;D1;D2
+SP+control,1,8,1487.92,P1;P8;A1;A2;F1;S1;D1;D2
+SP+drive,1,8,1674.34,P2;P8;A1;A2;F1;S1;D1;D2
+SP+evidence,1,5,2180.32,P1;P2;P4;P7;P8;A1;A2;F1;S1;S2;D1
+SP+ndt,1,7,1948.01,P1;P2;P8;A1;A2;F1;S1;D1;D2
+SP+threshold,1,9,1370.94,P2;P8;A1;F1;S1;D1;D2
+SP+drive+evidence,2,9,473.68,P2;P8;A1;A2;F1;S1;D1
+SP+evidence+threshold,2,12,408.92,P8;A2;F1;S1
+SP+evidence+urgency,2,9,1043.39,P1;P2;A1;A2;F1;S1;D1
+SP+drive+evidence+ndt,3,10,428.97,P2;P8;A1;A2;F1;S1
+SP+evidence+control+threshold,3,12,419.95,A1;F1;S1;D1
+SP+evidence+threshold+lapse,3,13,383.48,P8;F1;S1
+SP+threshold+lapse+ndt,3,10,1017.89,P1;P8;F1;S1;D1;D2
+SP+drive+evidence+control+threshold+urgency+lapse+ndt,7,11,504.69,P2;P3;P8;F1;S1

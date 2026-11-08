@@ -15,7 +15,7 @@ Depends on
     Nothing in this project.
 
 Last substantive change
-    2026-11-07 — added the control-signal table and the accuracy-aware fits (01 --with-errors, 10-14; 07 and 12 take hours).
+    2026-11-07 — added the mechanism comparison (11 --fine, 15-17); stages 07, 12, 15 and 16 take hours.
 
 Run from the project root: python SkillPractice-AcrossTasks_pipeline.py
 """
@@ -39,6 +39,10 @@ STAGES = [
     "3_analyses/12_fit_accuracy_mixtures.py",
     "3_analyses/13_collect_accuracy_mixtures.py",
     "3_analyses/14_make_accuracy_report.py",
+    "3_analyses/11_pooled_accuracy_profiles.py --fine",
+    "3_analyses/15_fit_mechanism_selection.py",
+    "3_analyses/16_fit_shared_combinations.py",
+    "3_analyses/17_make_mechanism_report.py",
     "3_analyses/05_write_dictionaries.py",
 ]
 

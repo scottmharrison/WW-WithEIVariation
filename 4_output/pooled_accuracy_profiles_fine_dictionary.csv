@@ -1,0 +1,8 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+measure,"accuracy, correct_rt_pct or error_rt_pct.",,accuracy; correct_rt_pct; error_rt_pct; 0 missing
+level,"Percentile (12 for correct RTs), for RT measures.",,5 to 99; 14 missing
+value_A,Value in A.,,0.64202 to 4971.75; 0 missing
+value_B,Value in B.,,0.67918 to 3335.2; 0 missing
+change,Accuracy: B - A; RT: percent change.,proportion or %,-72.7273 to 523.402; 0 missing
+se,Cluster-bootstrap SE over units.,proportion or %,0.00133 to 55.6474; 0 missing

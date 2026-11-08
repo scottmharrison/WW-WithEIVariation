@@ -1,0 +1,20 @@
+column,description,units,valid_values
+contrast,Contrast id.,,text; 0 missing
+axis,Axis moved.,,drive level; instruction; item practice; practice; skill; 0 missing
+selected,Combination chosen by forward selection (stage 15).,,text; 0 missing
+selected_p,Its chi-square p.,,0.00013 to 1; 0 missing
+selected_adequate,p > .05.,,False; True; 0 missing
+selected_k,Changed parameters in it.,,2 to 7; 0 missing
+sp_p,Skill + practice p.,,0 to 0.9615; 0 missing
+sp_adequate,Skill + practice p > .05.,,False; True; 0 missing
+ceiling_chi2,Lowest chi-square of any fit for the contrast.,,0.226 to 25.081; 0 missing
+ceiling_model_p,p of the all-mechanism model; empty where it has as many changes as terms.,,0.00018 to 0.99881; 3 missing
+best_single,Mechanism with the largest AIC drop when added alone.,,control; drive; evidence; ndt; threshold; urgency; 0 missing
+aic_gain_drive,AIC of skill + practice minus AIC with drive added alone.,,-146.515 to 681.162; 0 missing
+aic_gain_evidence,AIC of skill + practice minus AIC with evidence added alone.,,-4.486 to 391.867; 0 missing
+aic_gain_control,AIC of skill + practice minus AIC with control added alone.,,-23.393 to 837.576; 0 missing
+aic_gain_threshold,AIC of skill + practice minus AIC with threshold added alone.,,-28.605 to 846.956; 0 missing
+aic_gain_urgency,AIC of skill + practice minus AIC with urgency added alone.,,-2 to 740.017; 0 missing
+aic_gain_lapse,AIC of skill + practice minus AIC with lapse added alone.,,-79.186 to 147.829; 0 missing
+aic_gain_ndt,AIC of skill + practice minus AIC with ndt added alone.,,-87.501 to 559.486; 0 missing
+aic_gain_retrieval,AIC of skill + practice minus AIC with retrieval added alone.,,-53.382 to -0.148; 0 missing

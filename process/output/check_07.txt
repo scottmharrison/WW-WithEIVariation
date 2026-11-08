@@ -1,0 +1,23 @@
+seed 20261107
+(0) blp__03: identical to wwsim.py: True
+(0) roitman2002__12: identical to wwsim.py: True
+(0) sc2__21: identical to wwsim.py: True
+
+(1) From calibrated A of A2: 10th/50th/99th [395. 508. 975.] ms, accuracy 0.858
+   thr 18 Hz             : 10th   +12.5%  median   +13.0%  99th   +16.3%  (ms shift at 10th/99th +49/+159)  accuracy +0.036  no commitment 0.0%
+   thr 22 Hz             : 10th   +27.0%  median   +26.9%  99th   +28.6%  (ms shift at 10th/99th +106/+279)  accuracy +0.050  no commitment 0.0%
+   thr 26 Hz             : 10th   +40.2%  median   +41.4%  99th   +49.7%  (ms shift at 10th/99th +159/+485)  accuracy +0.070  no commitment 0.0%
+   thr 30 Hz             : 10th   +53.3%  median   +59.5%  99th   +82.7%  (ms shift at 10th/99th +210/+807)  accuracy +0.089  no commitment 0.0%
+   thr 35 Hz             : 10th   +79.1%  median  +103.3%  99th  +490.4%  (ms shift at 10th/99th +312/+4782)  accuracy +0.116  no commitment 0.0%
+   lca_z 1.5             : 10th    +1.6%  median    +0.9%  99th    +1.6%  (ms shift at 10th/99th +6/+15)  accuracy -0.014  no commitment 0.0%
+   lca_z 2.0             : 10th    +1.4%  median    +0.5%  99th    +1.0%  (ms shift at 10th/99th +5/+10)  accuracy -0.008  no commitment 0.0%
+   lca_z 3.0             : 10th    +1.4%  median    +0.5%  99th    +1.0%  (ms shift at 10th/99th +5/+10)  accuracy -0.008  no commitment 0.0%
+   urg -0.01 nA/s        : 10th    +6.5%  median   +10.5%  99th   +38.6%  (ms shift at 10th/99th +25/+376)  accuracy +0.031  no commitment 6.3%
+   urg 0.01 nA/s         : 10th    -4.5%  median    -7.8%  99th   -26.3%  (ms shift at 10th/99th -18/-257)  accuracy -0.025  no commitment 0.0%
+   urg 0.03 nA/s         : 10th   -11.5%  median   -17.6%  99th   -40.5%  (ms shift at 10th/99th -45/-395)  accuracy -0.059  no commitment 0.0%
+   urg 0.06 nA/s         : 10th   -18.8%  median   -26.0%  99th   -49.7%  (ms shift at 10th/99th -74/-485)  accuracy -0.093  no commitment 0.0%
+   lapse p 0.05 gain 0.5 : 10th    +1.7%  median    +1.6%  99th   +32.7%  (ms shift at 10th/99th +7/+319)  accuracy -0.027  no commitment 0.0%
+   lapse p 0.1 gain 0.5  : 10th    +2.6%  median    +2.7%  99th   +69.5%  (ms shift at 10th/99th +10/+678)  accuracy -0.063  no commitment 0.0%
+   lapse p 0.1 gain 0.25 : 10th    +2.0%  median    +2.0%  99th  +460.0%  (ms shift at 10th/99th +8/+4484)  accuracy -0.042  no commitment 1.1%
+   lca_bias 0.95         : 10th    +0.3%  median    -0.1%  99th    -0.5%  (ms shift at 10th/99th +1/-5)  accuracy -0.011  no commitment 0.0%
+   lca_bias 0.99         : 10th    +0.5%  median    +0.5%  99th    +6.7%  (ms shift at 10th/99th +2/+66)  accuracy -0.008  no commitment 0.0%

@@ -16,7 +16,7 @@ Depends on
     03_summarise_contrasts.py
 
 Last substantive change
-    2026-11-07 — added the control-signal, accuracy-profile and accuracy-fit tables.
+    2026-11-07 — added the mechanism-comparison tables.
 
 Run from the project root.
 """
@@ -115,6 +115,21 @@ TABLES = {
                                           ("median_change_pct", "Simulated change in median correct RT.", "%"),
                                           ("q99_change_pct", "Simulated change in 99th percentile.", "%"),
                                           ("accuracy_change", "Simulated change in accuracy.", "proportion")],
+    "4_output/pooled_accuracy_profiles_fine.csv": [("contrast", "Contrast id.", ""), ("measure", "accuracy, correct_rt_pct or error_rt_pct.", ""),
+                                                   ("level", "Percentile (12 for correct RTs), for RT measures.", ""), ("value_A", "Value in A.", ""),
+                                                   ("value_B", "Value in B.", ""), ("change", "Accuracy: B - A; RT: percent change.", "proportion or %"),
+                                                   ("se", "Cluster-bootstrap SE over units.", "proportion or %")],
+    "4_output/mechanism_comparison.csv": [("contrast", "Contrast id.", ""), ("axis", "Axis moved.", ""),
+                                          ("selected", "Combination chosen by forward selection (stage 15).", ""),
+                                          ("selected_p", "Its chi-square p.", ""), ("selected_adequate", "p > .05.", ""),
+                                          ("selected_k", "Changed parameters in it.", ""), ("sp_p", "Skill + practice p.", ""),
+                                          ("sp_adequate", "Skill + practice p > .05.", ""), ("ceiling_chi2", "Lowest chi-square of any fit for the contrast.", ""),
+                                          ("ceiling_model_p", "p of the all-mechanism model; empty where it has as many changes as terms.", ""),
+                                          ("best_single", "Mechanism with the largest AIC drop when added alone.", "")]
+        + [(f"aic_gain_{m}", f"AIC of skill + practice minus AIC with {m} added alone.", "") for m in ['drive', 'evidence', 'control', 'threshold', 'urgency', 'lapse', 'ndt', 'retrieval']],
+    "4_output/shared_combinations.csv": [("combination", "Mechanisms added to skill + practice.", ""), ("n_mechanisms", "Number of mechanisms.", ""),
+                                         ("adequate_in", "Contrasts where the combination is adequate.", "contrasts"),
+                                         ("total_aic", "Sum of AIC over the 16 contrasts.", ""), ("failing", "Contrasts where it is not adequate.", "")],
 }
 
 for path, columns in TABLES.items():

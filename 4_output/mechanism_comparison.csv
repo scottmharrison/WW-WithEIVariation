@@ -1,0 +1,17 @@
+contrast,axis,selected,selected_p,selected_adequate,selected_k,sp_p,sp_adequate,ceiling_chi2,ceiling_model_p,best_single,aic_gain_drive,aic_gain_evidence,aic_gain_control,aic_gain_threshold,aic_gain_urgency,aic_gain_lapse,aic_gain_ndt,aic_gain_retrieval
+P1,practice,SP+drive+evidence,0.90647,True,4,0.0,False,7.252,0.18275,drive,198.182,-2.0,159.357,193.807,59.066,-4.0,186.132,-2.0
+P2,practice,SP+control,0.05734,True,4,0.0,False,17.25,0.00405,control,22.141,-2.0,53.003,15.787,-2.0,-4.0,-2.0,-2.0
+P3,practice,SP+drive,0.99811,True,3,0.64037,True,0.828,,drive,4.532,-1.469,-0.585,-3.413,3.965,-3.616,-0.024,-0.148
+P4,practice,SP+threshold,0.99828,True,4,0.0,False,2.572,0.68746,threshold,75.476,-4.486,80.634,81.62,72.551,-4.0,79.852,-2.0
+P5,practice,SP,0.9615,True,2,0.9615,True,6.319,0.19009,drive,-2.0,-2.0,-4.159,-4.0,-2.0,-2.783,-2.58,-2.0
+P6,practice,SP+evidence,0.98791,True,3,0.71524,True,3.859,0.56982,evidence,-0.733,4.989,-4.0,0.453,-2.0,-3.448,-2.0,-2.0
+P7,practice,SP+drive,0.82982,True,3,0.0,False,5.691,0.32825,drive,56.978,37.754,51.473,54.899,38.167,14.332,49.615,-2.0
+P8,practice,SP+evidence+urgency,0.48875,True,4,0.0,False,13.485,0.00018,evidence,-2.0,87.825,-23.393,46.445,79.13,49.057,-87.501,-2.0
+P9,practice,SP,0.92963,True,2,0.92963,True,4.169,0.52533,urgency,-2.0,-2.0,-2.233,-1.297,-0.436,-1.498,-2.0,-2.0
+A1,instruction,SP+ndt+lapse+threshold,0.9448,True,7,0.0,False,3.535,0.45132,ndt,276.503,-2.0,279.821,279.713,-2.0,88.986,305.301,-2.0
+A2,instruction,SP+threshold+lapse+evidence,0.65215,True,7,0.0,False,5.767,0.21775,threshold,681.162,-2.0,837.576,846.956,740.017,147.829,559.486,-2.0
+F1,item practice,SP+evidence+threshold+control,0.0221,False,7,0.0,False,19.771,0.00059,evidence,6.036,53.635,-10.379,52.942,-2.0,27.6,2.802,-2.0
+S1,skill,SP+drive,0.00013,False,3,0.0,False,25.081,,drive,11.417,1.513,3.733,-4.0,6.949,2.99,-2.0,-2.0
+S2,skill,SP+ndt,1.0,True,3,0.03538,False,0.226,0.99881,ndt,20.269,-2.0,19.645,20.43,16.988,-4.0,24.503,-2.0
+D1,drive level,SP+evidence+ndt+drive,0.99714,True,5,0.0,False,0.754,,evidence,-146.515,291.164,14.435,-28.605,41.16,7.015,-30.042,-28.306
+D2,drive level,SP+evidence+threshold,0.9297,True,5,0.0,False,5.646,0.2768,evidence,155.327,391.867,86.26,106.436,120.27,-79.186,1.556,-53.382
