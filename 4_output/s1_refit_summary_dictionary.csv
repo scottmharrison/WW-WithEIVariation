@@ -1,0 +1,10 @@
+column,description,units,valid_values
+setting,"raw or lattice-aware percentiles, with 8 or 10 mechanisms (raw_8 is stage 15's S1 fit).",,lattice_10; lattice_8; raw_10; raw_8; 0 missing
+model,Mechanisms added to skill + practice (SP).,,SP; SP+drive; SP+drive+evidence; SP+drive+lapse; 0 missing
+role,selected = final model of forward selection; skill + practice = the two-parameter baseline.,,selected; skill + practice; 0 missing
+k,Fitted parameters.,,2 to 5; 0 missing
+chi2,"Chi-square over 12 percentiles, data and simulation SE.",,22.33 to 70.54; 0 missing
+df,12 - k.,,7 to 10; 0 missing
+p,Chi-square tail probability; adequate at p > .05.,,3.4864e-11 to 0.00222798; 0 missing
+aic,chi2 + 2k; comparable only within a setting.,,32.33 to 74.54; 0 missing
+changes,Fitted changes from Bronze to Grandmaster.,,s=-0.011; p=2.303; d=0.384; pL=0.127; gL=0.159; s=0.180; p=2.716; s=0.259; p=2.575; d=0.259; s=0.374; p=2.504; d=0.268; e=0.843; 0 missing

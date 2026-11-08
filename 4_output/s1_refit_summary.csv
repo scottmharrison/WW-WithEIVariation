@@ -1,0 +1,9 @@
+setting,model,role,k,chi2,df,p,aic,changes
+raw_8,SP,skill + practice,2,46.435,10,1.1960740613110774e-06,50.435,s=0.180; p=2.716
+raw_8,SP+drive,selected,3,33.018,9,0.00013258328071281714,39.018,s=0.259; p=2.575; d=0.259
+raw_10,SP,skill + practice,2,43.686,10,3.747401737578109e-06,47.686,s=0.180; p=2.716
+raw_10,SP+drive+evidence,selected,4,26.907,8,0.0007335287577253344,34.907,s=0.374; p=2.504; d=0.268; e=0.843
+lattice_8,SP,skill + practice,2,70.54,10,3.486399442375595e-11,74.54,s=0.180; p=2.716
+lattice_8,SP+drive+lapse,selected,5,22.33,7,0.002227982971349011,32.33,s=-0.011; p=2.303; d=0.384; pL=0.127; gL=0.159
+lattice_10,SP,skill + practice,2,70.54,10,3.486399442375595e-11,74.54,s=0.180; p=2.716
+lattice_10,SP+drive+lapse,selected,5,22.33,7,0.002227982971349011,32.33,s=-0.011; p=2.303; d=0.384; pL=0.127; gL=0.159

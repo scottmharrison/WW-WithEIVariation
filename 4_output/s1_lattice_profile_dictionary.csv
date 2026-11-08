@@ -1,0 +1,7 @@
+column,description,units,valid_values
+percentiles,raw = ordinary percentiles; lattice = each RT spread evenly over its 45.198 ms recording step (20_fit_starcraft_lattice.py).,,lattice; raw; 0 missing
+level,Percentile.,,5 to 99; 0 missing
+value_A,"Bronze games, pooled.",ms,135.593 to 4989.52; 0 missing
+value_B,"Grandmaster games, pooled.",ms,115.344 to 1815.2; 0 missing
+change,Percent change from Bronze to Grandmaster.,%,-72.7273 to 0; 0 missing
+se,SD over 500 cluster-bootstrap replicates (games resampled within league).,%,1.214 to 19.8688; 0 missing

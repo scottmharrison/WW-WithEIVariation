@@ -1,0 +1,4 @@
+lattice_10 step 1 {'drive': 35.077, 'evidence': 90.248, 'control': 53.67, 'threshold': 72.014, 'urgency': 49.771, 'lapse': 51.82, 'ndt': 82.737, 'retrieval': 86.812, 'circuit': 49.028, 'retrieval_strength': 82.22}
+lattice_10 step 2 {'evidence': 36.098, 'control': 39.308, 'threshold': 36.658, 'urgency': 37.642, 'lapse': 32.33, 'ndt': 37.644, 'retrieval': 40.34, 'circuit': 37.978, 'retrieval_strength': 36.737}
+lattice_10 step 3 {'evidence': 34.701, 'control': 36.51, 'threshold': 38.748, 'urgency': 34.33, 'ndt': 34.33, 'retrieval': 34.33, 'circuit': 34.33, 'retrieval_strength': 36.728}
+lattice_10 selected SP+drive+lapse p 0.002227982971349011

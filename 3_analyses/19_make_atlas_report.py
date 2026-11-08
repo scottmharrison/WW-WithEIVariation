@@ -5,7 +5,7 @@ Purpose
     Write the mechanism atlas: what each of 14 processes in the extended Wong-Wang model does to the RT
     distribution (its location, spread, fast edge, slow tail and accuracy), from three starting points;
     how the processes compare in shape space; how much of each contrast's fitted change each mechanism
-    carries; and why StarCraft 2 fits well in WW-CarefulFitting but not in the contrast fits here.
+    carries; and how StarCraft 2's fitted parameters and recording steps differ between leagues.
 
 Inputs
     4_output/atlas/sweeps.json, 4_output/atlas/decomposition.json (18_mechanism_atlas.py);
@@ -20,7 +20,7 @@ Depends on
     18_mechanism_atlas.py
 
 Last substantive change
-    2026-11-07 — first version.
+    2026-11-08 — u* grouped with the retrieval route, where the model uses it.
 
 Run from the project root.
 """
@@ -287,7 +287,7 @@ conds = {r["cond_id"]: r for r in csv.DictReader(open("1_raw/ww_conditions.csv")
 keys = ["W_self", "W_inhib", "u_star", "u0", "u0_sd", "logN", "N_logsd", "s_W", "rho_max", "sigL", "ter_sd"]
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(WIDTH, 3.4), gridspec_kw=dict(width_ratios=[1, 1.2]))
 ratios = [abs(float(conds["sc2__27"][k]) / float(conds["sc2__21"][k])) for k in keys]
-kcol = ["#117733" if k in ("W_self", "W_inhib", "u_star") else "#AA4499" if k in ("s_W", "rho_max", "logN", "N_logsd", "sigL") else "#999999" for k in keys]
+kcol = ["#117733" if k in ("W_self", "W_inhib") else "#AA4499" if k in ("u_star", "s_W", "rho_max", "logN", "N_logsd", "sigL") else "#999999" for k in keys]
 # Lines drawn from a ratio of 1 (no difference), so the length shows the size of the difference on the log scale.
 a1.hlines(range(len(keys)), 1, ratios, color=kcol, lw=2.5)
 a1.scatter(ratios, range(len(keys)), color=kcol, s=14, zorder=3)
@@ -307,12 +307,11 @@ a2.legend(frameon=False, fontsize=6.5); a2.yaxis.set_minor_formatter(NullFormatt
 fig.tight_layout()
 name = f"atlas_fig{fnum}_starcraft"
 figures.append((name, fig))
-captions[name] = (f"Figure {fnum}. Why StarCraft 2 fits well in WW-CarefulFitting but not here. Left: ratio of each fitted parameter, "
-    "Grandmaster to Bronze, in WW-CarefulFitting's pooled-league fits: the circuit's weights (green; tipping point u* 24.0 to 9.1 Hz) and "
-    "the retrieval route (purple; rho_max x4.4, s_W x0.17) differ most, and neither is among the mechanisms fitted here. Right: the "
-    "observed percentiles sit on 45.2 ms recording steps (Grandmaster's 5th and 20th percentiles are both 135.6 ms), a staircase that a "
-    "smooth model cannot follow when judged percentile by percentile; WW-CarefulFitting's binned likelihood is built around the steps. "
-    "WW-CarefulFitting also judges fits against other models (BIC), here against an absolute chi-square test.")
+captions[name] = (f"Figure {fnum}. StarCraft 2, Bronze and Grandmaster. Left: ratio of each fitted parameter, Grandmaster to Bronze, in "
+    "WW-CarefulFitting's pooled-league fits: circuit weights (green), retrieval route (purple; retrieval rate rho_max x4.4, drive gain set "
+    "by u* 24.0 to 9.1 Hz, onset scale s_W x0.17), others (grey; ter_sd x6.6). Right: observed percentiles of S1, which lie on 45.2 ms "
+    "recording steps (grey lines); Grandmaster's 5th, 10th and 20th percentiles are all 135.6 ms. Fits of S1 with these steps and with "
+    "circuit and retrieval strength are in SkillPractice-StarCraftRefit_report.pdf.")
 
 with PdfPages(out / "SkillPractice-Atlas_report.pdf") as pdf:
     for name, fig in figures:

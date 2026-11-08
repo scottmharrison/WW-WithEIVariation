@@ -15,7 +15,7 @@ Depends on
     Nothing in this project.
 
 Last substantive change
-    2026-11-07 — added the mechanism atlas (stages 18 and 19).
+    2026-11-08 — added the StarCraft 2 refit (stages 20 and 21).
 
 Run from the project root: python SkillPractice-AcrossTasks_pipeline.py
 """
@@ -45,6 +45,11 @@ STAGES = [
     "3_analyses/17_make_mechanism_report.py",
     "3_analyses/18_mechanism_atlas.py",
     "3_analyses/19_make_atlas_report.py",
+    "3_analyses/20_fit_starcraft_lattice.py observations",
+    "3_analyses/20_fit_starcraft_lattice.py raw_10",
+    "3_analyses/20_fit_starcraft_lattice.py lattice_8",
+    "3_analyses/20_fit_starcraft_lattice.py lattice_10",
+    "3_analyses/21_make_starcraft_report.py",
     "3_analyses/05_write_dictionaries.py",
 ]
 

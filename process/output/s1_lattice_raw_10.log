@@ -1,0 +1,4 @@
+raw_10 step 1 {'drive': 37.776, 'evidence': 46.752, 'control': 42.85, 'threshold': 51.686, 'urgency': 44.749, 'lapse': 48.489, 'ndt': 47.51, 'retrieval': 49.686, 'circuit': 39.371, 'retrieval_strength': 51.713}
+raw_10 step 2 {'evidence': 34.907, 'control': 41.235, 'threshold': 41.776, 'urgency': 39.776, 'lapse': 36.246, 'ndt': 40.085, 'retrieval': 39.422, 'circuit': 39.477, 'retrieval_strength': 37.935}
+raw_10 step 3 {'control': 38.907, 'threshold': 40.305, 'urgency': 36.907, 'lapse': 38.907, 'ndt': 36.907, 'retrieval': 36.907, 'circuit': 36.907, 'retrieval_strength': 39.011}
+raw_10 selected SP+drive+evidence p 0.0007335287577253344

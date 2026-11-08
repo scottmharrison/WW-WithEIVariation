@@ -16,7 +16,7 @@ Depends on
     03_summarise_contrasts.py
 
 Last substantive change
-    2026-11-07 — added the mechanism-fingerprint table.
+    2026-11-08 — added the StarCraft 2 refit tables.
 
 Run from the project root.
 """
@@ -139,6 +139,14 @@ TABLES = {
                                             ("accuracy (pts)", "Change in accuracy.", "percentage points"), ("mu (ms)", "Change in ex-Gaussian mu.", "ms"),
                                             ("sigma (ms)", "Change in ex-Gaussian sigma.", "ms"), ("tau (ms)", "Change in ex-Gaussian tau.", "ms"),
                                             ("Hill index", "Change in the Hill tail index of the slowest 5% (larger = lighter tail).", "")],
+    "4_output/s1_lattice_profile.csv": [("percentiles", "raw = ordinary percentiles; lattice = each RT spread evenly over its 45.198 ms recording step (20_fit_starcraft_lattice.py).", ""),
+                                        ("level", "Percentile.", ""), ("value_A", "Bronze games, pooled.", "ms"), ("value_B", "Grandmaster games, pooled.", "ms"),
+                                        ("change", "Percent change from Bronze to Grandmaster.", "%"),
+                                        ("se", "SD over 500 cluster-bootstrap replicates (games resampled within league).", "%")],
+    "4_output/s1_refit_summary.csv": [("setting", "raw or lattice-aware percentiles, with 8 or 10 mechanisms (raw_8 is stage 15's S1 fit).", ""), ("model", "Mechanisms added to skill + practice (SP).", ""),
+                                      ("role", "selected = final model of forward selection; skill + practice = the two-parameter baseline.", ""), ("k", "Fitted parameters.", ""),
+                                      ("chi2", "Chi-square over 12 percentiles, data and simulation SE.", ""), ("df", "12 - k.", ""), ("p", "Chi-square tail probability; adequate at p > .05.", ""),
+                                      ("aic", "chi2 + 2k; comparable only within a setting.", ""), ("changes", "Fitted changes from Bronze to Grandmaster.", "")],
 }
 
 for path, columns in TABLES.items():
