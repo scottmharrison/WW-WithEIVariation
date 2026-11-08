@@ -1,0 +1,15 @@
+column,description,units,valid_values
+start,Starting point: calibrated condition A of this contrast.,,A2; P9; S1; 0 missing
+process,Process moved alone (18_mechanism_atlas.py).,,text; 0 missing
+from_level,Lowest setting.,,text; 0 missing
+to_level,Highest setting.,,text; 0 missing
+instance_share_from,Share of decided trials won by the instance route at the lowest setting.,proportion,0 to 0.901; 0 missing
+10th %,"Change in the 10th percentile of correct RTs, highest vs lowest setting.",%,-81.465 to 120.349; 0 missing
+median %,Change in the median of correct RTs.,%,-80.665 to 189.088; 0 missing
+99th %,Change in the 99th percentile.,%,-92.298 to 773.38; 0 missing
+99th/median %,Change in the ratio of the 99th percentile to the median.,%,-83.176 to 202.115; 0 missing
+accuracy (pts),Change in accuracy.,percentage points,-12.547 to 29.208; 0 missing
+mu (ms),Change in ex-Gaussian mu.,ms,-352.188 to 340.213; 0 missing
+sigma (ms),Change in ex-Gaussian sigma.,ms,-192.444 to 280.564; 0 missing
+tau (ms),Change in ex-Gaussian tau.,ms,-1488.64 to 1231.09; 0 missing
+Hill index,Change in the Hill tail index of the slowest 5% (larger = lighter tail).,,-3.809 to 21.909; 0 missing

@@ -16,7 +16,7 @@ Depends on
     03_summarise_contrasts.py
 
 Last substantive change
-    2026-11-07 — added the mechanism-comparison tables.
+    2026-11-07 — added the mechanism-fingerprint table.
 
 Run from the project root.
 """
@@ -130,6 +130,15 @@ TABLES = {
     "4_output/shared_combinations.csv": [("combination", "Mechanisms added to skill + practice.", ""), ("n_mechanisms", "Number of mechanisms.", ""),
                                          ("adequate_in", "Contrasts where the combination is adequate.", "contrasts"),
                                          ("total_aic", "Sum of AIC over the 16 contrasts.", ""), ("failing", "Contrasts where it is not adequate.", "")],
+    "4_output/mechanism_fingerprints.csv": [("start", "Starting point: calibrated condition A of this contrast.", ""), ("process", "Process moved alone (18_mechanism_atlas.py).", ""),
+                                            ("from_level", "Lowest setting.", ""), ("to_level", "Highest setting.", ""),
+                                            ("instance_share_from", "Share of decided trials won by the instance route at the lowest setting.", "proportion"),
+                                            ("10th %", "Change in the 10th percentile of correct RTs, highest vs lowest setting.", "%"),
+                                            ("median %", "Change in the median of correct RTs.", "%"), ("99th %", "Change in the 99th percentile.", "%"),
+                                            ("99th/median %", "Change in the ratio of the 99th percentile to the median.", "%"),
+                                            ("accuracy (pts)", "Change in accuracy.", "percentage points"), ("mu (ms)", "Change in ex-Gaussian mu.", "ms"),
+                                            ("sigma (ms)", "Change in ex-Gaussian sigma.", "ms"), ("tau (ms)", "Change in ex-Gaussian tau.", "ms"),
+                                            ("Hill index", "Change in the Hill tail index of the slowest 5% (larger = lighter tail).", "")],
 }
 
 for path, columns in TABLES.items():
