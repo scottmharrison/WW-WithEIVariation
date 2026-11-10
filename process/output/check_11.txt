@@ -1,0 +1,28 @@
+contrasts: ['A1', 'A2', 'D1', 'D2', 'F1', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'S1', 'S2']
+mechanism | single AIC drop>2 (n) | best single | selected in | median fix among drop>2: fast body tail acc err
+drive | 11 ['A1', 'A2', 'D2', 'F1', 'P1', 'P2', 'P3', 'P4', 'P7', 'S1', 'S2'] | best ['P1', 'P3', 'P7', 'S1'] | selected ['D1', 'P1', 'P3', 'P7', 'S1'] | {'fast': 8.8, 'body': 41.9, 'tail': 3.0, 'accuracy': -0.6, 'error': 25.0}
+evidence | 6 ['D1', 'D2', 'F1', 'P6', 'P7', 'P8'] | best ['D1', 'D2', 'F1', 'P6', 'P8'] | selected ['A2', 'D1', 'D2', 'F1', 'P1', 'P6', 'P8'] | {'fast': 9.5, 'body': 27.1, 'tail': 19.6, 'accuracy': 35.8, 'error': 35.2}
+control | 10 ['A1', 'A2', 'D1', 'D2', 'P1', 'P2', 'P4', 'P7', 'S1', 'S2'] | best ['P2'] | selected ['F1', 'P2'] | {'fast': 9.6, 'body': 54.3, 'tail': 8.3, 'accuracy': 0.1, 'error': 26.1}
+threshold | 10 ['A1', 'A2', 'D2', 'F1', 'P1', 'P2', 'P4', 'P7', 'P8', 'S2'] | best ['A2', 'P4'] | selected ['A1', 'A2', 'D2', 'F1', 'P4'] | {'fast': 50.5, 'body': 55.8, 'tail': 6.6, 'accuracy': 0.2, 'error': 48.8}
+urgency | 10 ['A2', 'D1', 'D2', 'P1', 'P3', 'P4', 'P7', 'P8', 'S1', 'S2'] | best [] | selected ['P8'] | {'fast': 11.2, 'body': 33.9, 'tail': 9.2, 'accuracy': -0.3, 'error': 17.7}
+lapse | 7 ['A1', 'A2', 'D1', 'F1', 'P7', 'P8', 'S1'] | best [] | selected ['A1', 'A2'] | {'fast': 8.3, 'body': 7.8, 'tail': 22.1, 'accuracy': 0.0, 'error': 2.4}
+ndt | 7 ['A1', 'A2', 'F1', 'P1', 'P4', 'P7', 'S2'] | best ['A1', 'S2'] | selected ['A1', 'D1', 'S2'] | {'fast': 16.1, 'body': 61.7, 'tail': 3.0, 'accuracy': 0.1, 'error': 30.7}
+retrieval | 0 [] | best [] | selected [] | {'fast': None, 'body': None, 'tail': None, 'accuracy': None, 'error': None}
+
+chosen combination by contrast
+A1 SP+ndt+lapse+threshold p 0.9448 {'s': 0.81, 'p': 1.331, 't': 139.078, 'pL': 0.157, 'gL': 0.356, 'h': 0.311, 'hz': 0.059}
+A2 SP+threshold+lapse+evidence p 0.6522 {'s': 0.283, 'p': -2.434, 'h': 0.425, 'hz': -0.323, 'pL': 0.039, 'gL': 0.603, 'e': 0.68}
+D1 SP+evidence+ndt+drive p 0.9971 {'s': 1.649, 'p': -5.0, 'e': 12.551, 't': -248.004, 'd': 0.073}
+D2 SP+evidence+threshold p 0.9297 {'s': -0.269, 'p': 4.887, 'e': 7.096, 'h': 0.031, 'hz': 0.127}
+F1 SP+evidence+threshold+control p 0.0221 {'s': 0.124, 'p': 5.696, 'e': 9.78, 'h': -0.129, 'hz': 0.279, 'cS': 0.0, 'cR': 1.266}
+P1 SP+drive+evidence p 0.9065 {'s': -0.188, 'p': 2.086, 'd': 0.235, 'e': 0.471}
+P2 SP+control p 0.0573 {'s': 0.161, 'p': 2.188, 'cS': 0.487, 'cR': 1.118}
+P3 SP+drive p 0.9981 {'s': 0.125, 'p': 0.776, 'd': 0.095}
+P4 SP+threshold p 0.9983 {'s': -0.027, 'p': 2.056, 'h': -0.167, 'hz': -0.476}
+P5 SP p 0.9615 {'s': -0.07, 'p': 0.039}
+P6 SP+evidence p 0.9879 {'s': 0.5, 'p': 1.657, 'e': 0.777}
+P7 SP+drive p 0.8298 {'s': 0.008, 'p': 2.719, 'd': 0.057}
+P8 SP+evidence+urgency p 0.4887 {'s': -0.027, 'p': 0.256, 'e': 0.427, 'urg': 0.001}
+P9 SP p 0.9296 {'s': 0.062, 'p': 1.18}
+S1 SP+drive p 0.0001 {'s': 0.259, 'p': 2.575, 'd': 0.259}
+S2 SP+ndt p 1.0 {'s': 0.084, 'p': 1.845, 't': -97.979}
